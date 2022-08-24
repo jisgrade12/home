@@ -13,6 +13,12 @@ body {
 	color: var(--text-color);
 	font-family: "titillium web", sans-serif;
 }
+.page-full {
+	display: inline-flex;
+	width: 94vw;
+	height: 100%;
+	margin: 8vw 3vw 3vw 3vw;
+}
 a {
 	text-decoration: none;
 	color: inherit;
@@ -27,13 +33,29 @@ nav {
 	width: 100%;
 	height: 6vw;
 	z-index: 1000;
-	background-color: #242424;
+	background: #242424;
 	box-shadow: #000000 0 10px 10px;
 	transition: all 0.5s ease-in-out;
 }
 nav:hover {
-	background-color: #202020;
 	color: var(--text-color);
+	background: #202020;
+	background: linear-gradient(
+		135deg,
+		#202020 77.5%,
+		var(--main-color) 78%,
+		#202020 78.5%
+	);
+	background-size: 300%;
+	animation: nav-gradient 15s infinite;
+}
+@keyframes nav-gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 120% 50%;
+	}
 }
 nav:hover img {
 	filter: grayscale(0%);
@@ -61,6 +83,12 @@ nav > .pages .material-symbols-outlined:hover {
 	font-variation-settings: "FILL" 1, "wght" 250, "GRAD" 0, "opsz" 48;
 	color: var(--main-color);
 }
+nav > .pages #activated {
+	color: #b7b7b7;
+}
+nav:hover > .pages #activated {
+	color: var(--main-color);
+}
 span.hover-info {
 	display: none;
 	text-align: center;
@@ -71,7 +99,8 @@ span.hover-info {
 	background-color: #434242;
 	height: 2vw;
 	transition: all 0.5s ease-in-out;
-	margin-left: -1.5vw;
+	margin-left: -2vw;
+	margin-right: auto;
 	margin-top: 1vh;
 	font-size: 1.2vw;
 	border-radius: 0.5vw;
@@ -108,8 +137,72 @@ nav #nav-name::after {
 	filter: opacity(0);
 }
 nav:hover #nav-name::after {
-	content: " | jis";
 	color: var(--main-color);
 	visibility: visible;
 	filter: opacity(100);
+}
+#sign-opts {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.sign-button {
+	background-color: #202020;
+	padding: 1vw;
+	border-radius: 1vw;
+	border: var(--main-color) 1px solid;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+}
+.sign-button:hover {
+	box-sizing: border-box;
+	background-color: var(--main-color);
+	color: var(--text-inverse);
+}
+.sign-button:nth-child(2) {
+	margin-left: 1vw;
+}
+.form {
+	display: flex;
+}
+form {
+	font-family: "bebas neue", sans-serif;
+	font-size: 3vw;
+	width: 94vw;
+	margin: 0 3vw;
+}
+legend {
+	font-family: "bebas neue", sans-serif;
+	letter-spacing: 1px;
+	font-size: 5vw;
+	color: #06d0cb;
+}
+.nav-resistance {
+	height: 8vw;
+}
+input,
+select {
+	justify-content: center;
+	font-size: 2.3vw;
+	padding: 1vw;
+	background-color: var(--text-inverse);
+	color: var(--main-color);
+	border-radius: 0.5vw;
+	transition: all 0.5s ease-in-out;
+	box-sizing: border-box;
+	user-select: none;
+	width: 90%;
+	font-family: "titillium web", sans-serif;
+}
+input:focus,
+select:focus {
+	color: var(--text-color);
+	border: var(--text-color) solid 0.3vw;
+}
+input:hover,
+select:hover {
+	transform: scale(1.05);
+	box-shadow: #000000 2px 2px 2px;
+	margin: 0.5vw 2vw;
 }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="../images/12_l.png" />
+		<link rel="stylesheet" href="../stylesheets/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+		<script src="../scripts/script.js"></script>
+		<script src="../scripts/auth_signup_password.js"></script>
+		<script src="../scripts/auth_signin_password.js"></script>
+		<script src="../scripts/auth_sign_out.js"></script>
+		<title>Grade 12 | Home Page</title>
+	</head>
+	<body>
+		<nav>
+			<a href="../index.html"
+				><img src="../images/12_s.png" alt="Grade 12 Logo"
+			/></a>
+			<h1 id="nav-name">Grade 12</h1>
+			<span class="pages"
+				><a href="../index.html"
+					><span class="material-symbols-outlined" id="activated">
+						home <span class="hover-info">Home</span></span
+					></a
+				><a href="news.html"
+					><span class="material-symbols-outlined">
+						feed <span class="hover-info">News</span></span
+					></a
+				><a href="timeline.html"
+					><span class="material-symbols-outlined">
+						view_timeline <span class="hover-info">Timeline</span></span
+					></a
+				><a href="chat.html"
+					><span class="material-symbols-outlined">
+						chat <span class="hover-info">Chatting</span></span
+					></a
+				><a href="calendar.html"
+					><span class="material-symbols-outlined">
+						calendar_month <span class="hover-info">Calendar</span></span
+					></a
+				><a href="countdown.html"
+					><span class="material-symbols-outlined">
+						hourglass_empty <span class="hover-info">Countdown(s)</span></span
+					></a
+				><a href="suggest.html"
+					><span class="material-symbols-outlined">
+						assistant <span class="hover-info">Suggestions</span></span
+					></a
+				><a href="account.html"
+					><span class="material-symbols-outlined">
+						account_circle <span class="hover-info">Account</span></span
+					></a
+				></span
+			>
+		</nav>
+		<div class="nav-resistance"></div>
+		<div id="sign-opts">
+			<div class="sign-button">Sign Up</div>
+			<div class="sign-button">Sign In</div>
+		</div>
+		<br />
+		<div class="form">
+			<form
+				class="generated-form"
+				method="GET"
+				action="../scripts/auth_signup_password.js"
+				target="_self"
+			>
+				<fieldset>
+					<legend>Sign Up</legend>
+					<label for="text">First Name:</label><br />
+					<input type="text" id="text" name="f_name" /><br />
+					<label for="text">Last Name:</label><br />
+					<input type="text" id="text" name="l_name" /><br />
+					<label for="date">Date of Birth:</label><br />
+					<input type="date" id="date" name="dob" /><br />
+					<label for="password">Email:</label><br />
+					<input type="email" id="email" name="email" /><br />
+					<label for="password">Password:</label><br />
+					<input type="password" id="password" name="password" /><br />
+					<label for="positon">Who are you:</label><br />
+					<select id="positon">
+						<option value="admin">Admin</option>
+						<option value="rep">Class Representative</option>
+						<option value="teacher">Teacher</option>
+						<option value="student">(General) Student</option>
+						<option value="former">(Former) Student</option>
+						<option value="other">Other</option>
+					</select>
+					<br /><br />
+					<input type="submit" value="Submit" /><br /><br />
+				</fieldset>
+			</form>
+		</div>
+	</body>
+</html>
