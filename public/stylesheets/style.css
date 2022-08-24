@@ -100,3 +100,16 @@ nav:hover #nav-name {
 	margin-left: 1vw;
 	color: var(--main-color);
 }
+nav #nav-name::after {
+	content: " | jis";
+	color: var(--text-color);
+	visibility: hidden;
+	transition: all 0.5s ease-in-out;
+	filter: opacity(0);
+}
+nav:hover #nav-name::after {
+	content: " | jis";
+	color: var(--main-color);
+	visibility: visible;
+	filter: opacity(100);
+}
