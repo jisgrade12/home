@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Joan&family=Kdam+Thmor+Pro&family=Koulen&family=Titillium+Web&family=Tourney&display=swap");
 :root {
-	--main-color: #06d0cb;
-	--text-color: #f5f5f5;
-	--text-inverse: #2b2b2b;
+	--main-color: #18d2cf;
+	--text-color: #252525;
+	--text-inverse: #d7d7d7;
 }
 head,
 body {
@@ -33,18 +33,18 @@ nav {
 	width: 100%;
 	height: 6vw;
 	z-index: 1000;
-	background: #242424;
-	box-shadow: #000000 0 10px 10px;
+	background: var(--text-inverse);
+	box-shadow: #000000c3 0 7px 7px;
 	transition: all 0.5s ease-in-out;
 }
 nav:hover {
 	color: var(--text-color);
-	background: #202020;
+	background: var(--text-inverse);
 	background: linear-gradient(
 		135deg,
-		#202020 77.5%,
+		var(--text-inverse) 77.5%,
 		var(--main-color) 78%,
-		#202020 78.5%
+		var(--text-inverse) 78.5%
 	);
 	background-size: 300%;
 	animation: nav-gradient 15s infinite;
@@ -84,7 +84,7 @@ nav > .pages .material-symbols-outlined:hover {
 	color: var(--main-color);
 }
 nav > .pages #activated {
-	color: #b7b7b7;
+	color: #019387;
 }
 nav:hover > .pages #activated {
 	color: var(--main-color);
@@ -96,7 +96,7 @@ span.hover-info {
 	align-items: center;
 	position: absolute;
 	filter: opacity(0%);
-	background-color: #434242;
+	background-color: var(--text-inverse);
 	height: 2vw;
 	transition: all 0.5s ease-in-out;
 	margin-left: -2vw;
