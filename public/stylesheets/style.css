@@ -196,10 +196,10 @@ legend {
 	background: rgb(226, 63, 63);
 	background: linear-gradient(
 		90deg,
-		rgba(226, 63, 63, 1) 0%,
-		rgba(172, 0, 244, 1) 40%,
-		rgba(172, 0, 244, 1) 60%,
-		rgba(226, 63, 63, 1) 100%
+		rgb(29, 29, 29) 10%,
+		#42a09f 40%,
+		#42a09f 60%,
+		rgb(29, 29, 29) 80%
 	);
 	background-size: 500%;
 	filter: contrast(1);
@@ -240,13 +240,13 @@ select:hover {
 	z-index: -1;
 }
 path:nth-child(2n-1) {
-	fill: #bcbcbc3a;
+	fill: #bcbcbc16;
 }
 path:nth-child(2n) {
-	fill: #d7d7d73a;
+	fill: #d7d7d716;
 }
 .home-title {
-	font-family: "koulen", "titillium web", sans-serif;
+	font-family: "koulen", sans-serif;
 	font-size: 10vw;
 	margin-left: 5vw;
 	letter-spacing: -1px;
@@ -258,4 +258,64 @@ path:nth-child(2n) {
 	color: #d7d7d7a7;
 	filter: drop-shadow(var(--text-inverse) 4px 4px 4px);
 	transform: translateY(-10px);
+}
+.home-title:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 1vw;
+	top: 15vw;
+	bottom: 0;
+	left: 0;
+	background-color: #3aaeac9d;
+	transform-origin: bottom right;
+	transition: transform 0.4s ease-out;
+}
+
+.home-title:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+.button-holder {
+	position: absolute;
+	top: 80;
+	display: grid;
+	grid-template-rows: 50% 50%;
+	row-gap: 2vw;
+	margin-left: 70vw;
+	margin-right: 5vw;
+	margin-top: 5vw;
+}
+.home-but {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5vw 3vw;
+	font-size: 2.3vw;
+	transition: all 0.7s ease-in-out;
+	border-radius: 1vw;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+.home-but:hover {
+	color: #d7d7d7a7;
+	filter: drop-shadow(var(--text-inverse) 4px 4px 4px);
+	transform: translateY(-10px);
+}
+.home-but:nth-child(n):hover {
+	background-color: #ffffff24;
+	color: #d7d7d7;
+}
+.home-but:nth-child(1) {
+	background-color: white;
+	color: var(--text-inverse);
+}
+.home-but:nth-child(2) {
+	background-color: white;
+	color: var(--text-inverse);
+}
+.button-holder .material-symbols-outlined {
+	font-size: 3vw;
+	margin-right: 1vw;
 }
