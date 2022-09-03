@@ -12,6 +12,11 @@
 		/>
 		<script src="scripts/script.js"></script>
 		<title>Grade 12 | Home Page</title>
+		<script src="scripts/jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
 	</head>
 	<body>
 		<nav>
@@ -85,9 +90,22 @@
 			<div class="nav-resistance"></div>
 			<div class="home-title">Grade 12</div>
 			<div class="button-holder">
-				<div class="home-but"><span class="material-symbols-outlined">groups</span> See the Team!</div>
-				<div class="home-but"><span class="material-symbols-outlined">start</span> Join Now!</div>
+				<a href="pages/members.html"><div class="home-but"><span class="material-symbols-outlined">groups</span> See the Team!</div></a>
+				<a href="pages/account.html"><div class="home-but"><span class="material-symbols-outlined">start</span> Join Now!</div></a>
 			</div>
 		</div>
+		<h2>About</h2>
+		<h3>Full of desires, empathy, and talent; Grade 12 of JIS is a class to be. It has all which faccilitates a being into an extraordinary one.</h3>
+		<h2>Members</h2>
+		<h3>Grade 12 is a class!</h3>
+		<script>
+			$(".counter").counterUp({
+	delay: 10,
+	time: 2000,
+});
+$(".counter").addClass("animated fadeInDownBig");
+$("h3").addClass("animated fadeIn");
+
+		</script>
 	</body>
 </html>

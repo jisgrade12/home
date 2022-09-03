@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Joan&family=Kdam+Thmor+Pro&family=Koulen&family=Titillium+Web&family=Tourney&display=swap");
 :root {
-	--main-color: #18d2cf;
+	--main-color: #14adaa;
 	--text-color: #d7d7d7;
 	--text-inverse: #252525;
 }
@@ -190,10 +190,11 @@ legend {
 .nav-resistance {
 	height: 8vw;
 }
-.home-1 {
+.home-1,
+.home-404 {
 	width: 100%;
 	height: 100vh;
-	background: rgb(226, 63, 63);
+	background: #42a09f;
 	background: linear-gradient(
 		90deg,
 		rgb(29, 29, 29) 10%,
@@ -204,6 +205,17 @@ legend {
 	background-size: 500%;
 	filter: contrast(1);
 	animation: wallpaper 50s infinite linear;
+}
+.home-404 {
+	background: #bb1111;
+	background: linear-gradient(
+		90deg,
+		rgb(29, 29, 29) 10%,
+		#a00e0e 40%,
+		#bb1111 60%,
+		rgb(29, 29, 29) 80%
+	);
+	background-size: 500%;
 }
 @keyframes wallpaper {
 	to {
@@ -278,8 +290,9 @@ path:nth-child(2n) {
 	transform-origin: bottom left;
 }
 .button-holder {
-	position: absolute;
-	top: 80;
+	user-select: none;
+	position: fixed;
+	margin-top: 80vh;
 	display: grid;
 	grid-template-rows: 50% 50%;
 	row-gap: 2vw;
@@ -288,6 +301,7 @@ path:nth-child(2n) {
 	margin-top: 5vw;
 }
 .home-but {
+	user-select: none;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -303,8 +317,12 @@ path:nth-child(2n) {
 	filter: drop-shadow(var(--text-inverse) 4px 4px 4px);
 	transform: translateY(-10px);
 }
-.home-but:nth-child(n):hover {
+.home-but:nth-child(2n-1):hover {
 	background-color: #ffffff24;
+	color: #d7d7d7;
+}
+.home-but:nth-child(2n):hover {
+	background-color: #23cbc924;
 	color: #d7d7d7;
 }
 .home-but:nth-child(1) {
@@ -318,4 +336,23 @@ path:nth-child(2n) {
 .button-holder .material-symbols-outlined {
 	font-size: 3vw;
 	margin-right: 1vw;
+}
+h2 {
+	font-family: "koulen", "titillium web", sans-serif;
+	font-weight: normal;
+	font-size: 5vw;
+	margin: 2vw 0 0 3vw;
+	text-decoration: underline;
+	text-decoration-color: var(--main-color);
+}
+h3 {
+	font-weight: normal;
+	font-family: "titillium web", sans-serif;
+	font-size: 2.5vw;
+	margin: 0 3vw 1vw 3vw;
+	line-height: 3vw;
+}
+.counter {
+	animation-duration: 1s;
+	animation-delay: 0s;
 }
