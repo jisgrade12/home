@@ -361,66 +361,94 @@ h3 {
 	animation-duration: 1s;
 	animation-delay: 0s;
 }
-.home-members {
+.home-members,
+.home-counters {
 	display: grid;
 	grid-template-columns: 33.3% 33.3% 33.3%;
 	margin: 0 3vw 0 3vw;
 }
-.member {
+.member,
+.counters {
 	user-select: none;
-	display: grid;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	font-size: 2.3vw;
 	transition: all 0.7s ease-in-out;
-	border-radius: 1vw;
+	border-radius: 1.5vw;
 	cursor: pointer;
 	box-sizing: border-box;
 	margin: 3vw 1vw;
-	padding: 5vw 0;
+	padding: 3.5vw 0;
 	text-align: center;
 }
-.member .material-symbols-outlined {
+.member .material-symbols-outlined,
+.counters .material-symbols-outlined {
 	font-size: 3.5vw;
 	font-variation-settings: "FILL" 0, "wght" 350, "GRAD" 0, "opsz" 48;
 }
-.member:hover .material-symbols-outlined {
+.member:hover .material-symbols-outlined,
+.counters:hover .material-symbols-outlined {
 	font-variation-settings: "FILL" 1, "wght" 350, "GRAD" 0, "opsz" 48;
 	transition: all 0.7s ease-in-out;
 	color: var(--text-color);
 }
-.member:hover {
+.member:hover,
+.counters:hover {
 	color: #d7d7d7a7;
 	filter: drop-shadow(var(--text-inverse) 4px 4px 4px);
 	transform: translateY(-10px);
 }
-.member:nth-child(2n-1):hover {
+.member:nth-child(2n-1):hover,
+.counters:nth-child(2n-1):hover {
 	background-color: #ffffff24;
 	color: #d7d7d7;
 }
-.member:nth-child(2n):hover {
+.member:nth-child(2n):hover,
+.counters:nth-child(2n):hover {
 	background-color: #23cbc924;
 	color: #d7d7d7;
 }
-.member:nth-child(2n-1) {
+.member:nth-child(2n-1),
+.counters:nth-child(2n-1) {
 	background-color: white;
 	color: var(--text-inverse);
 }
-.member:nth-child(2n) {
+.member:nth-child(2n),
+.counters:nth-child(2n) {
 	background-color: white;
 	color: var(--text-inverse);
 }
-.member .name {
+.member > .name {
 	font-size: 3.5vw;
 	font-family: "koulen", sans-serif;
 }
-.member .quote {
+.member > .quote {
 	font-size: 1.5vw;
 	margin: 0 1vw 1vw 1vw;
 	font-family: "titillium web", sans-serif;
 }
-.member .role {
+.member > .role {
 	font-size: 2vw;
 	font-weight: lighter;
 	font-family: "koulen", sans-serif;
+}
+.counters > .name {
+	font-size: 2.7vw;
+	font-family: "koulen", sans-serif;
+}
+.counters > .counter {
+	font-family: "koulen", sans-serif;
+	font-size: 5vw;
+}
+.counters > .role {
+	font-size: 2vw;
+	font-family: "titillium web", sans-serif;
+}
+div.name {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
 }
