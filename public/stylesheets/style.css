@@ -377,14 +377,15 @@ h3 {
 	cursor: pointer;
 	box-sizing: border-box;
 	margin: 3vw 1vw;
-	padding: 10vw 0;
+	padding: 5vw 0;
+	text-align: center;
 }
 .member .material-symbols-outlined {
 	font-size: 3.5vw;
 	font-variation-settings: "FILL" 0, "wght" 350, "GRAD" 0, "opsz" 48;
 }
 .member:hover .material-symbols-outlined {
-	font-variation-settings: "FILL" 1, "wght" 250, "GRAD" 0, "opsz" 48;
+	font-variation-settings: "FILL" 1, "wght" 350, "GRAD" 0, "opsz" 48;
 	transition: all 0.7s ease-in-out;
 	color: var(--text-color);
 }
@@ -410,6 +411,16 @@ h3 {
 	color: var(--text-inverse);
 }
 .member .name {
-	font-size: 4vw;
+	font-size: 3.5vw;
+	font-family: "koulen", sans-serif;
+}
+.member .quote {
+	font-size: 1.5vw;
+	margin: 0 1vw 1vw 1vw;
+	font-family: "titillium web", sans-serif;
+}
+.member .role {
+	font-size: 2vw;
+	font-weight: lighter;
 	font-family: "koulen", sans-serif;
 }
