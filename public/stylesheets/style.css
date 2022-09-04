@@ -361,3 +361,55 @@ h3 {
 	animation-duration: 1s;
 	animation-delay: 0s;
 }
+.home-members {
+	display: grid;
+	grid-template-columns: 33.3% 33.3% 33.3%;
+	margin: 0 3vw 0 3vw;
+}
+.member {
+	user-select: none;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	font-size: 2.3vw;
+	transition: all 0.7s ease-in-out;
+	border-radius: 1vw;
+	cursor: pointer;
+	box-sizing: border-box;
+	margin: 3vw 1vw;
+	padding: 10vw 0;
+}
+.member .material-symbols-outlined {
+	font-size: 3.5vw;
+	font-variation-settings: "FILL" 0, "wght" 350, "GRAD" 0, "opsz" 48;
+}
+.member:hover .material-symbols-outlined {
+	font-variation-settings: "FILL" 1, "wght" 250, "GRAD" 0, "opsz" 48;
+	transition: all 0.7s ease-in-out;
+	color: var(--text-color);
+}
+.member:hover {
+	color: #d7d7d7a7;
+	filter: drop-shadow(var(--text-inverse) 4px 4px 4px);
+	transform: translateY(-10px);
+}
+.member:nth-child(2n-1):hover {
+	background-color: #ffffff24;
+	color: #d7d7d7;
+}
+.member:nth-child(2n):hover {
+	background-color: #23cbc924;
+	color: #d7d7d7;
+}
+.member:nth-child(2n-1) {
+	background-color: white;
+	color: var(--text-inverse);
+}
+.member:nth-child(2n) {
+	background-color: white;
+	color: var(--text-inverse);
+}
+.member .name {
+	font-size: 4vw;
+	font-family: "koulen", sans-serif;
+}
