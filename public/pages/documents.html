@@ -13,14 +13,14 @@
 		<script src="../scripts/auth_signup_password.js"></script>
 		<script src="../scripts/auth_signin_password.js"></script>
 		<script src="../scripts/auth_sign_out.js"></script>
-		<title>Grade 12 | Account</title>
+		<title>Grade 12 | Documents</title>
 	</head>
 	<body>
 		<nav>
 			<a href="../index.html"
 				><img src="../images/12_s.png" alt="Grade 12 Logo"
 			/></a>
-			<h1 id="nav-name">Account</h1>
+			<h1 id="nav-name">Documents</h1>
 			<span class="pages"
 				><a href="../index.html"
 					><span class="material-symbols-outlined">
@@ -30,7 +30,7 @@
 					><span class="material-symbols-outlined">
 						group <span class="hover-info">Members</span></span
 					></a
-				><a href="documents.html"
+				><a href="#tp" id="activated"
 					><span class="material-symbols-outlined">
 						feed <span class="hover-info">Documents</span></span
 					></a
@@ -54,7 +54,7 @@
 					><span class="material-symbols-outlined">
 						assistant <span class="hover-info">Suggestions</span></span
 					></a
-				><a href="#tp" id="activated"
+				><a href="account.html"
 					><span class="material-symbols-outlined">
 						account_circle <span class="hover-info">Account</span></span
 					></a
@@ -63,51 +63,50 @@
 		</nav>
 		<div class="nav-resistance"></div>
 		<center>
-			<div class="container right-panel-active">
-				<div class="container__form container--signup">
-					<form action="#" class="form" id="form1">
-						<h2 class="form__title">Sign Up</h2>
-						<input type="text" placeholder="User" class="input" />
-						<input type="email" placeholder="Email" class="input" />
-						<input type="password" placeholder="Password" class="input" />
-						<button class="btn">Sign Up</button>
-					</form>
-				</div>
-				<div class="container__form container--signin">
-					<form action="#" class="form" id="form2">
-						<h2 class="form__title">Sign In</h2>
-						<input type="email" placeholder="Email" class="input" />
-						<input type="password" placeholder="Password" class="input" />
-						<a href="#" class="link">Forgot your password?</a>
-						<button class="btn">Sign In</button>
-					</form>
-				</div>
-				<div class="container__overlay">
-					<div class="overlay">
-						<div class="overlay__panel overlay--left">
-							<button class="btn" id="signIn">Sign In</button>
-						</div>
-						<div class="overlay__panel overlay--right">
-							<button class="btn" id="signUp">Sign Up</button>
-						</div>
+			<div class="doc-container">
+				<div class="doc-card">
+					<h3>Upload Files</h3>
+					<div class="drop_box">
+						<header>
+							<h4>Select File here</h4>
+						</header>
+						<p>Files Supported: PDF, TEXT, DOC , DOCX</p>
+						<input
+							type="file"
+							hidden
+							accept=".doc,.docx,.pdf"
+							id="fileID"
+							style="display: none"
+						/>
+						<button class="doc-btn">Choose File</button>
 					</div>
 				</div>
 			</div>
 		</center>
 		<script>
-			const signInBtn = document.getElementById("signIn");
-			const signUpBtn = document.getElementById("signUp");
-			const fistForm = document.getElementById("form1");
-			const secondForm = document.getElementById("form2");
-			const container = document.querySelector(".container");
-			signInBtn.addEventListener("click", () => {
-				container.classList.remove("right-panel-active");
+			const dropArea = document.querySelector(".drop_box"),
+				button = dropArea.querySelector("button"),
+				dragText = dropArea.querySelector("header"),
+				input = dropArea.querySelector("input");
+			let file;
+			var filename;
+
+			button.onclick = () => {
+				input.click();
+			};
+
+			input.addEventListener("change", function (e) {
+				var fileName = e.target.files[0].name;
+				let filedata = `
+    <form action="" method="post">
+    <div class="doc-form">
+    <h4>${fileName}</h4>
+    <input type="email" placeholder="Enter email upload file">
+    <button class="doc-btn">Upload</button>
+    </div>
+    </form>`;
+				dropArea.innerHTML = filedata;
 			});
-			signUpBtn.addEventListener("click", () => {
-				container.classList.add("right-panel-active");
-			});
-			fistForm.addEventListener("submit", (e) => e.preventDefault());
-			secondForm.addEventListener("submit", (e) => e.preventDefault());
 		</script>
 	</body>
 </html>
