@@ -715,7 +715,7 @@ div.name {
 }
 .row:last-child .pixel {
 	border-bottom: none;
-} /* Style */
+}
 .snk-btn {
 	background: var(--main-color);
 	-webkit-border-radius: 6;
@@ -733,36 +733,34 @@ div.name {
 /*Timeline*/
 .cd-horizontal-timeline {
 	opacity: 0;
-	margin: 2em auto;
+	margin: 2vw auto;
 	-webkit-transition: opacity 0.2s;
 	-moz-transition: opacity 0.2s;
 	transition: opacity 0.2s;
 }
 .cd-horizontal-timeline::before {
-	/* never visible - this is used in jQuery to check the current MQ */
 	content: "mobile";
 	display: none;
 }
 .cd-horizontal-timeline.loaded {
-	/* show the timeline after events position has been set (using JavaScript) */
 	opacity: 1;
 }
 .cd-horizontal-timeline .timeline {
 	position: relative;
 	height: 100px;
 	width: 90%;
-	max-width: 800px;
+	max-width: 90vw;
 	margin: 0 auto;
 }
 .cd-horizontal-timeline .events-wrapper {
 	position: relative;
 	height: 100%;
-	margin: 0 40px;
+	margin: 0 38px;
 	overflow: hidden;
 }
 .cd-horizontal-timeline .events-wrapper::after,
 .cd-horizontal-timeline .events-wrapper::before {
-	/* these are used to create a shadow effect at the sides of the timeline */
+	/* these are used to create a shadow effect 80pxat the sides of the timeline */
 	content: "";
 	position: absolute;
 	z-index: 2;
@@ -777,7 +775,6 @@ div.name {
 	right: 0;
 }
 .cd-horizontal-timeline .events {
-	/* this is the grey line/timeline */
 	position: absolute;
 	z-index: 1;
 	left: 0;
@@ -859,16 +856,12 @@ div.name {
 	border-color: var(--main-color);
 }
 @media only screen and (min-width: 1100px) {
-	.cd-horizontal-timeline {
-		margin: 0 auto;
-	}
 	.cd-horizontal-timeline::before {
 		content: "desktop";
 	}
 }
 
 .cd-timeline-navigation a {
-	/* these are the left/right arrows to navigate the timeline */
 	position: absolute;
 	z-index: 1;
 	top: 50%;
@@ -891,7 +884,6 @@ div.name {
 	transition: border-color 0.3s;
 }
 .cd-timeline-navigation a::after {
-	/* arrow icon */
 	content: "chevron_right";
 	display: flex;
 	margin-top: -7px;
@@ -900,7 +892,6 @@ div.name {
 	-ms-transform: translateX(-50%) translateY(-50%);
 	-o-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
-	background: url(../img/cd-arrow.svg) no-repeat 0 0;
 }
 .cd-timeline-navigation a.prev {
 	left: 0;
@@ -930,7 +921,7 @@ div.name {
 .cd-horizontal-timeline .events-content {
 	position: relative;
 	width: 100%;
-	margin: 2em 0;
+	margin: 1vw 0;
 	overflow: hidden;
 	-webkit-transition: height 0.4s;
 	-moz-transition: height 0.4s;
@@ -947,7 +938,6 @@ div.name {
 	-ms-transform: translateX(-100%);
 	-o-transform: translateX(-100%);
 	transform: translateX(-100%);
-	padding: 0 5%;
 	opacity: 0;
 	-webkit-animation-duration: 0.4s;
 	-moz-animation-duration: 0.4s;
@@ -957,7 +947,6 @@ div.name {
 	animation-timing-function: ease-in-out;
 }
 .cd-horizontal-timeline .events-content li.selected {
-	/* visible event content */
 	position: relative;
 	z-index: 2;
 	opacity: 1;
@@ -986,24 +975,28 @@ div.name {
 	animation-direction: reverse;
 }
 .cd-horizontal-timeline .events-content li > * {
-	max-width: 800px;
-	margin: 0 auto;
+	display: flex;
+	max-width: 90vw;
 }
 .cd-horizontal-timeline .events-content h2 {
 	font-size: 5vw;
 	line-height: 1.2;
 	letter-spacing: 0.1vw;
 	text-decoration: none;
+	margin: 0 3vw;
 }
 .cd-horizontal-timeline .events-content em {
-	display: block;
+	display: flex;
 	font-style: italic;
+	margin: 0 3vw;
 	margin: 10px auto;
 }
 .cd-horizontal-timeline .events-content em::before {
 	content: "- ";
 }
 .cd-horizontal-timeline .events-content p {
+	width: 94vw;
+	margin: 0 3vw;
 	font-size: 1.4rem;
 	color: #959595;
 }
