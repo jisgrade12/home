@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="../images/12_l.png" />
+		<link rel="stylesheet" href="../stylesheets/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.min.css"
+		/>
+		<title>Grade 12 | Calendar</title>
+	</head>
+	<body>
+		<nav>
+			<a href="../index.html"
+				><img src="../images/12_s.png" alt="Grade 12 Logo"
+			/></a>
+			<h1 id="nav-name">Calendar</h1>
+			<span class="pages"
+				><a href="../index.html"
+					><span class="material-symbols-outlined">
+						home <span class="hover-info">Home</span></span
+					></a
+				><a href="members.html"
+					><span class="material-symbols-outlined">
+						group <span class="hover-info">Members</span></span
+					></a
+				><a href="documents.html"
+					><span class="material-symbols-outlined">
+						feed <span class="hover-info">Documents</span></span
+					></a
+				><a href="timeline.html"
+					><span class="material-symbols-outlined">
+						view_timeline <span class="hover-info">Timeline</span></span
+					></a
+				><a href="chat.html"
+					><span class="material-symbols-outlined">
+						chat <span class="hover-info">Chatting</span></span
+					></a
+				><a href="#tp" id="activated"
+					><span class="material-symbols-outlined">
+						calendar_month <span class="hover-info">Calendar</span></span
+					></a
+				><a href="countdown.html"
+					><span class="material-symbols-outlined">
+						hourglass_empty <span class="hover-info">Countdown(s)</span></span
+					></a
+				><a href="suggest.html"
+					><span class="material-symbols-outlined">
+						assistant <span class="hover-info">Suggestions</span></span
+					></a
+				><a href="account.html"
+					><span class="material-symbols-outlined">
+						account_circle <span class="hover-info">Account</span></span
+					></a
+				></span
+			>
+		</nav>
+		<div class="nav-resistance"></div>
+		<div data-provide="calendar"></div>
+		<script src="https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.min.js"></script>
+		<script>
+			import Calendar from "js-year-calendar";
+			import "js-year-calendar/dist/js-year-calendar.css";
+			new Calendar(".calendar", {
+				style: "background",
+				minDate: new Date(),
+			});
+			calendar.setStyle("background");
+			calendar.setMaxDate(new Date());
+			document
+				.querySelector(".calendar")
+				.addEventListener("yearChanged", function (e) {
+					console.log("New year selected: " + e.currentYear);
+				});
+		</script>
+	</body>
+</html>
