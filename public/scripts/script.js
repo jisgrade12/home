@@ -1,4 +1,4 @@
-(function () {
+/*/(function () {
 	const second = 1000,
 		minute = second * 60,
 		hour = minute * 60,
@@ -15,7 +15,6 @@
 	if (today > birthday) {
 		birthday = dayMonth + nextYear;
 	}
-	//end
 
 	const countDown = new Date(birthday).getTime(),
 		x = setInterval(function () {
