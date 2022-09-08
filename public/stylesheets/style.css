@@ -83,7 +83,7 @@ nav > .pages .material-symbols-outlined {
 nav > .pages .material-symbols-outlined:hover {
 	font-variation-settings: "FILL" 1, "wght" 250, "GRAD" 0, "opsz" 48;
 	color: var(--main-color);
-	background-color: #353535;
+	background-color: #35353556;
 	border-radius: 25%;
 	transition: all 0.5s ease-in-out;
 }
@@ -160,7 +160,7 @@ nav:hover #nav-name::after {
 	background: #42a09f;
 	background: linear-gradient(
 		90deg,
-		rgb(29, 29, 29) 10%,
+		rgb(29, 29, 29) 20%,
 		#42a09f 40%,
 		#42a09f 60%,
 		rgb(29, 29, 29) 80%
@@ -173,9 +173,9 @@ nav:hover #nav-name::after {
 	background: #bb1111;
 	background: linear-gradient(
 		90deg,
-		rgb(29, 29, 29) 10%,
-		#a00e0e 40%,
-		#bb1111 60%,
+		rgb(29, 29, 29) 20%,
+		#7d0b0b 40%,
+		#af1010 60%,
 		rgb(29, 29, 29) 80%
 	);
 	background-size: 500%;
@@ -220,7 +220,7 @@ path:nth-child(2n-1) {
 path:nth-child(2n) {
 	fill: #d7d7d716;
 }
-.home-title {
+.home-title, .for-title {
 	font-family: "koulen", sans-serif;
 	font-size: 10vw;
 	margin-left: 5vw;
@@ -229,12 +229,12 @@ path:nth-child(2n) {
 	z-index: 100;
 	width: fit-content;
 }
-.home-title:hover {
+.home-title:hover, .for-title:hover {
 	color: #d7d7d7a7;
 	filter: drop-shadow(var(--text-inverse) 4px 4px 4px);
 	transform: translateY(-10px);
 }
-.home-title:after {
+.home-title:after, .for-title:after {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -243,33 +243,37 @@ path:nth-child(2n) {
 	top: 15vw;
 	bottom: 0;
 	left: 0;
-	background-color: #3aaeac9d;
 	transform-origin: bottom right;
 	transition: transform 0.4s ease-out;
 }
-
-.home-title:hover:after {
+.home-title:after{
+	background-color: #3aaeac9d;
+}
+.for-title:after{
+	background-color: #af10109d;
+}
+.home-title:hover:after, .for-title:hover::after {
 	transform: scaleX(1);
 	transform-origin: bottom left;
 }
 .button-holder {
+	position:absolute;
+	width: 25vw;
 	user-select: none;
-	position: fixed;
-	margin-top: 80vh;
+	top: 60vh;
 	display: grid;
 	grid-template-rows: 50% 50%;
-	row-gap: 2vw;
-	margin-left: 70vw;
-	margin-right: 5vw;
-	margin-top: 5vw;
+	row-gap: 2vh;
+	left: 70vw;
+	right: 5vw;
 }
 .home-but {
 	user-select: none;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 1.5vw 3vw;
-	font-size: 2.3vw;
+	padding: 1.9vw 3vw;
+	font-size: 2.4vw;
 	transition: all 0.7s ease-in-out;
 	border-radius: 1vw;
 	cursor: pointer;
