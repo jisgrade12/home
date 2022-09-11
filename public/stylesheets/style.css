@@ -17,10 +17,12 @@ body {
 	color: var(--text-color);
 	font-family: "titillium web", sans-serif;
 }
-a:not(.member-link) {
+a:not(.member-link, .home-blink) {
+	width: fit-content;
+}
+a {
 	text-decoration: none;
 	color: inherit;
-	width: fit-content;
 }
 .material-symbols-outlined {
 	font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
