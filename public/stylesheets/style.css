@@ -17,7 +17,7 @@ body {
 	color: var(--text-color);
 	font-family: "titillium web", sans-serif;
 }
-a {
+a:not(.member-link){
 	text-decoration: none;
 	color: inherit;
 	width: fit-content;
@@ -1164,4 +1164,11 @@ h6 {
 	font-weight: normal;
 	font-size: 1.2vw;
 	margin-left: 3vw;
+}
+.home-members .game-img img{
+	height: 5vw;
+}
+.member-link{
+	text-decoration: none;
+	color: inherit;
 }

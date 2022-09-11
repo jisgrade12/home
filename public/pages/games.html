@@ -10,17 +10,14 @@
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
 		/>
-		<script src="../scripts/auth_signup_password.js"></script>
-		<script src="../scripts/auth_signin_password.js"></script>
-		<script src="../scripts/auth_sign_out.js"></script>
-		<title>Grade 12 | sign in</title>
+		<title>Grade 12 | Games</title>
 	</head>
 	<body>
 		<nav>
 			<a href="../index.html"
 				><img src="../images/12_s.png" alt="Grade 12 Logo"
 			/></a>
-			<h1 id="nav-name">sign in</h1>
+			<h1 id="nav-name">Games</h1>
 			<span class="pages"
 				><a href="../index.html"
 					><span class="material-symbols-outlined">
@@ -40,7 +37,7 @@
 					></a
 				><a href="chat.html"
 					><span class="material-symbols-outlined">
-						chat <span class="hover-info">Chatting</span></span
+						chat <span class="hover-info">Chat</span></span
 					></a
 				><a href="calendar.html"
 					><span class="material-symbols-outlined">
@@ -54,11 +51,11 @@
 					><span class="material-symbols-outlined">
 						assistant <span class="hover-info">Suggestions</span></span
 					></a
-				><a href="games.html"
+				><a href="#tp" id="activated"
                 ><span class="material-symbols-outlined">
                     stadia_controller <span class="hover-info">Games</span></span
                 ></a
-            ><a href="account.html" id="activated"
+            ><a href="signup.html"
 					><span class="material-symbols-outlined">
 						account_circle <span class="hover-info">Account</span></span
 					></a
@@ -66,37 +63,35 @@
 			>
 		</nav>
 		<div class="nav-resistance" id="tp"></div>
-		<h2 style="margin-left: 12%">sign in</h2>
-		<center>
-			<form>
-				<label for="username"
-					><span class="material-symbols-outlined"> alternate_email </span>
-					Username</label
-				>
-				<input
-					type="text"
-					name="username"
-					title="Username"
-					placeholder="Username"
-					required
-				/>
-				<label for="Password"
-					><span class="material-symbols-outlined"> password </span>
-					Password</label
-				>
-				<input
-					type="password"
-					name="password"
-					title="Password"
-					placeholder="Password"
-					id=""
-					required
-				/>
-				<input type="submit" value="Sign In" />
-				<a class="form-links" href="#tp">Forgor password?</a>
-				<a class="form-links" href="signup.html">New here? Register Now!</a>
-			</form>
-		</center>
-		<div class="nav-resistance"></div>
+		<h2>Games</h2>
+			<div class="home-members">
+				<a href="snake.html" class="member-link"><div class="member">
+					<div class="name">
+						<span class="material-symbols-outlined">sports_esports</span>Snake
+					</div>
+					<div class="game-img">
+						<img src="https://www.svgrepo.com/show/407478/snake.svg" alt="Snake">
+					</div>
+					<div class="role">The nokia legend</div>
+				</div></a>
+				<a href="https://ayham.xyz/apps/sokoban/" class="member-link"><div class="member">
+					<div class="name">
+						<span class="material-symbols-outlined">sports_esports</span>Sokoban
+					</div>
+					<div class="game-img">
+						<img src="https://play-lh.googleusercontent.com/HN_H-djUHPmMmVOhuwo4ecLvnLEg_7xMUGvoR4IKvTm4P2fJc8mPWCOV2H06L-ksLOc" alt="Sokoban">
+					</div>
+					<div class="role">An Urban legend</div>
+				</div></a>
+				<a href="https://www.instagram.com/abdullahashar2004/" class="member-link" target="_blank"><div class="member">
+					<div class="name">
+						<span class="material-symbols-outlined">sports_esports</span>Abdullah Ashar
+					</div>
+					<div class="game-img">
+						<img src="../images/298421493_5927343360628494_4617873665066830702_n.jpg" alt="ABD">
+					</div>
+					<div class="role">Life's a game</div>
+				</div></a>
+			</div>
 	</body>
 </html>
