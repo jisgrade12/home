@@ -1165,6 +1165,9 @@ h6 {
 	font-size: 1.2vw;
 	margin-left: 3vw;
 }
+.home-members .game-img{
+	font-size: 2vw;
+}
 .home-members .game-img img{
 	height: 5vw;
 }
