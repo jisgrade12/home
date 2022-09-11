@@ -224,6 +224,13 @@ form {
 	padding: 2vw 5vw 2vw 5vw;
 	border-radius: 2vw;
 }
+.username{
+	width: 60%;
+	display: inline;
+}
+.rollno{
+	width: 30%;
+}
 .form-links {
 	display: block;
 	font-size: 2vw;

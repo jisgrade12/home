@@ -84,29 +84,31 @@
 					placeholder="Last Name"
 					required
 				/>
-				<label for="username"
+				<label for="username" style="display: inline;"
 					><span class="material-symbols-outlined"> account_circle </span>
 					Username</label
-				>
+				><label for="rollno"
+				><span class="material-symbols-outlined"> school </span> Roll
+				Number/School ID</label
+			>
 				<input
 					type="text"
 					name="username"
 					title="Username"
 					placeholder="Username"
 					required
-				/>
-				<label for="rollno"
-					><span class="material-symbols-outlined"> school </span> Roll
-					Number/School ID</label
-				>
-				<input
-					type="text"
-					name="rollno"
-					title="Roll No"
-					placeholder="Roll #"
-					value="2012"
-					required
-				/>
+					class="username"
+				/><input
+				type="text"
+				name="rollno"
+				title="Roll No"
+				placeholder="Roll #"
+				value="2012"
+				required
+				class="rollno"
+			/>
+				
+				
 				<label for="email"
 					><span class="material-symbols-outlined"> email </span> Email</label
 				>
