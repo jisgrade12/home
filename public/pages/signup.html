@@ -55,10 +55,10 @@
 						assistant <span class="hover-info">Suggestions</span></span
 					></a
 				><a href="games.html"
-                ><span class="material-symbols-outlined">
-                    stadia_controller <span class="hover-info">Games</span></span
-                ></a
-            ><a href="account.html" id="activated"
+					><span class="material-symbols-outlined">
+						stadia_controller <span class="hover-info">Games</span></span
+					></a
+				><a href="account.html" id="activated"
 					><span class="material-symbols-outlined">
 						account_circle <span class="hover-info">Account</span></span
 					></a
@@ -88,13 +88,18 @@
 					placeholder="Last Name"
 					required
 				/>
-				<label for="username" style="display: inline;"
+				<br />
+				<label
+					for="username"
+					style="display: inline-flex; width: fit-content; margin-left: -11%"
 					><span class="material-symbols-outlined"> account_circle </span>
 					Username</label
-				><label for="rollno"
-				><span class="material-symbols-outlined"> school </span> Roll
-				Number/School ID</label
-			>
+				><label
+					for="rollno"
+					style="display: inline-flex; width: fit-content; margin-left: 39%"
+					><span class="material-symbols-outlined"> school </span>School
+					ID</label
+				>
 				<input
 					type="text"
 					name="username"
@@ -103,16 +108,15 @@
 					required
 					class="username"
 				/><input
-				type="text"
-				name="rollno"
-				title="Roll No"
-				placeholder="Roll #"
-				value="2012"
-				required
-				class="rollno"
-			/>
-				
-				
+					type="text"
+					name="rollno"
+					title="Roll No"
+					placeholder="Roll #"
+					value="2012"
+					required
+					class="rollno"
+				/>
+
 				<label for="email"
 					><span class="material-symbols-outlined"> email </span> Email</label
 				>
@@ -121,7 +125,7 @@
 					name="email"
 					title="Email"
 					placeholder="Email"
-					id=""
+					id="register-email"
 					required
 				/>
 				<label for="Password"
@@ -133,7 +137,7 @@
 					name="password"
 					title="Password"
 					placeholder="Password"
-					id=""
+					id="register-password"
 					required
 				/>
 				<label for="position"
@@ -153,10 +157,11 @@
 					hidden
 					id=""
 				/>
-				<input type="submit" value="Sign Up" />
+				<input type="submit" value="Sign Up" id="register-btn" />
 				<a class="form-links" href="signin.html">Already have an account?</a>
 			</form>
 		</center>
 		<div class="nav-resistance"></div>
+		<script src="../scripts/form.js"></script>
 	</body>
 </html>

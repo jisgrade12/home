@@ -17,7 +17,7 @@ body {
 	color: var(--text-color);
 	font-family: "titillium web", sans-serif;
 }
-a:not(.member-link){
+a:not(.member-link) {
 	text-decoration: none;
 	color: inherit;
 	width: fit-content;
@@ -224,11 +224,12 @@ form {
 	padding: 2vw 5vw 2vw 5vw;
 	border-radius: 2vw;
 }
-.username{
+.username {
 	width: 60%;
 	display: inline;
 }
-.rollno{
+.rollno {
+	display: inline;
 	width: 30%;
 }
 .form-links {
@@ -1165,13 +1166,13 @@ h6 {
 	font-size: 1.2vw;
 	margin-left: 3vw;
 }
-.home-members .game-img{
+.home-members .game-img {
 	font-size: 2vw;
 }
-.home-members .game-img img{
+.home-members .game-img img {
 	height: 5vw;
 }
-.member-link{
+.member-link {
 	text-decoration: none;
 	color: inherit;
 }

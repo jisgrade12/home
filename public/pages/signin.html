@@ -13,14 +13,14 @@
 		<script src="../scripts/auth_signup_password.js"></script>
 		<script src="../scripts/auth_signin_password.js"></script>
 		<script src="../scripts/auth_sign_out.js"></script>
-		<title>Grade 12 | sign in</title>
+		<title>Grade 12 | Sign In</title>
 	</head>
 	<body>
 		<nav>
 			<a href="../index.html"
 				><img src="../images/12_s.png" alt="Grade 12 Logo"
 			/></a>
-			<h1 id="nav-name">sign in</h1>
+			<h1 id="nav-name">Sign In</h1>
 			<span class="pages"
 				><a href="../index.html"
 					><span class="material-symbols-outlined">
@@ -55,10 +55,10 @@
 						assistant <span class="hover-info">Suggestions</span></span
 					></a
 				><a href="games.html"
-                ><span class="material-symbols-outlined">
-                    stadia_controller <span class="hover-info">Games</span></span
-                ></a
-            ><a href="account.html" id="activated"
+					><span class="material-symbols-outlined">
+						stadia_controller <span class="hover-info">Games</span></span
+					></a
+				><a href="account.html" id="activated"
 					><span class="material-symbols-outlined">
 						account_circle <span class="hover-info">Account</span></span
 					></a
@@ -66,7 +66,7 @@
 			>
 		</nav>
 		<div class="nav-resistance" id="tp"></div>
-		<h2 style="margin-left: 12%">sign in</h2>
+		<h2 style="margin-left: 12%">Sign In</h2>
 		<center>
 			<form>
 				<label for="username"
@@ -79,6 +79,7 @@
 					title="Username"
 					placeholder="Username"
 					required
+					id="login-email"
 				/>
 				<label for="Password"
 					><span class="material-symbols-outlined"> password </span>
@@ -89,14 +90,15 @@
 					name="password"
 					title="Password"
 					placeholder="Password"
-					id=""
+					id="login-password"
 					required
 				/>
-				<input type="submit" value="Sign In" />
+				<input type="submit" value="Sign In" id="login-btn" />
 				<a class="form-links" href="#tp">Forgor password?</a>
 				<a class="form-links" href="signup.html">New here? Register Now!</a>
 			</form>
 		</center>
 		<div class="nav-resistance"></div>
+		<script src="../scripts/form.js"></script>
 	</body>
 </html>
