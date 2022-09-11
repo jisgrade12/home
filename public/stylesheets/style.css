@@ -20,6 +20,7 @@ body {
 a {
 	text-decoration: none;
 	color: inherit;
+	width: fit-content;
 }
 .material-symbols-outlined {
 	font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
@@ -189,38 +190,77 @@ input,
 select {
 	justify-content: center;
 	font-size: 2.3vw;
-	padding: 1vw;
-	background-color: var(--text-inverse);
-	color: var(--main-color);
+	padding: 0.7vw;
 	border-radius: 0.5vw;
-	transition: all 0.5s ease-in-out;
+	transition: all 0.7s ease-in-out;
 	box-sizing: border-box;
 	user-select: none;
 	width: 90%;
 	font-family: "titillium web", sans-serif;
+	margin-top: 1vw;
+	background-color: white;
+	color: var(--text-inverse);
+	margin-left: %;
+}
+input.name {
+	width: 45%;
 }
 input:focus,
 select:focus {
-	color: var(--text-color);
-	border: var(--text-color) solid 0.3vw;
+	color: var(--main-color);
 }
 input:hover,
 select:hover {
-	transform: scale(1.05);
-	box-shadow: #000000 2px 2px 2px;
-	margin: 0.5vw 2vw;
+	color: #d7d7d7a7;
+	filter: drop-shadow(var(--text-inverse) 4px 4px 4px);
+	transform: translateY(-10px);
+	text-shadow: #0000006b 1px 1px 22px;
+	background-color: #ffffff24;
+	color: #d7d7d7;
+}
+form {
+	background-color: #01938724;
+	width: 70%;
+	padding: 2vw 5vw 2vw 5vw;
+	border-radius: 2vw;
+}
+.form-links {
+	display: block;
+	font-size: 2vw;
+	margin: 2vw 0;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+}
+.form-links:hover {
+	color: var(--main-color);
+}
+label {
+	margin: 3vw 0 1.5vw 5%;
+	display: flex;
+	align-items: center;
+	font-size: 2.5vw;
+	transition: all 0.5s ease-in-out;
+}
+label .material-symbols-outlined {
+	font-size: 2.8vw;
+	transition: all 0.5s ease-in-out;
+	margin-right: 0.7vw;
+}
+label:hover .material-symbols-outlined {
+	color: var(--main-color);
 }
 .pattern {
 	position: absolute;
 	z-index: -1;
 }
-path:nth-child(2n-1) {
+path:nth-child(odd) {
 	fill: #bcbcbc16;
 }
-path:nth-child(2n) {
+path:nth-child(even) {
 	fill: #d7d7d716;
 }
-.home-title, .for-title {
+.home-title,
+.for-title {
 	font-family: "koulen", sans-serif;
 	font-size: 10vw;
 	margin-left: 5vw;
@@ -229,12 +269,14 @@ path:nth-child(2n) {
 	z-index: 100;
 	width: fit-content;
 }
-.home-title:hover, .for-title:hover {
+.home-title:hover,
+.for-title:hover {
 	color: #d7d7d7a7;
 	filter: drop-shadow(var(--text-inverse) 4px 4px 4px);
 	transform: translateY(-10px);
 }
-.home-title:after, .for-title:after {
+.home-title:after,
+.for-title:after {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -246,18 +288,19 @@ path:nth-child(2n) {
 	transform-origin: bottom right;
 	transition: transform 0.4s ease-out;
 }
-.home-title:after{
+.home-title:after {
 	background-color: #3aaeac9d;
 }
-.for-title:after{
+.for-title:after {
 	background-color: #af10109d;
 }
-.home-title:hover:after, .for-title:hover::after {
+.home-title:hover:after,
+.for-title:hover::after {
 	transform: scaleX(1);
 	transform-origin: bottom left;
 }
 .button-holder {
-	position:absolute;
+	position: absolute;
 	width: 25vw;
 	user-select: none;
 	top: 60vh;
@@ -290,11 +333,11 @@ path:nth-child(2n) {
 	transform: translateY(-10px);
 	text-shadow: #0000006b 2px 2px 2px;
 }
-.home-but:nth-child(2n-1):hover {
+.home-but:nth-child(odd):hover {
 	background-color: #ffffff24;
 	color: #d7d7d7;
 }
-.home-but:nth-child(2n):hover {
+.home-but:nth-child(even):hover {
 	background-color: #23cbc924;
 	color: #d7d7d7;
 }
@@ -368,23 +411,23 @@ h3 {
 	filter: drop-shadow(var(--text-inverse) 4px 4px 4px);
 	transform: translateY(-10px);
 }
-.member:nth-child(2n-1):hover,
-.counters:nth-child(2n-1):hover {
+.member:nth-child(odd):hover,
+.counters:nth-child(odd):hover {
 	background-color: #ffffff24;
 	color: #d7d7d7;
 }
-.member:nth-child(2n):hover,
-.counters:nth-child(2n):hover {
+.member:nth-child(even):hover,
+.counters:nth-child(even):hover {
 	background-color: #23cbc924;
 	color: #d7d7d7;
 }
-.member:nth-child(2n-1),
-.counters:nth-child(2n-1) {
+.member:nth-child(odd),
+.counters:nth-child(odd) {
 	background-color: white;
 	color: var(--text-inverse);
 }
-.member:nth-child(2n),
-.counters:nth-child(2n) {
+.member:nth-child(even),
+.counters:nth-child(even) {
 	background-color: white;
 	color: var(--text-inverse);
 }
@@ -531,7 +574,6 @@ div.name {
 	transform: translateX(20%);
 }
 .btn {
-	background-color: var(--text-inverse);
 	background-image: linear-gradient(
 		90deg,
 		var(--text-inverse) 0%,
@@ -545,10 +587,10 @@ div.name {
 	font-weight: bold;
 	padding: 1.5vw 5vw;
 	text-transform: uppercase;
-	transition: all 3s ease-in-out;
+	transition: all 1.5s ease-in-out;
 }
 .btn:hover {
-	background-image: linear-gradient(
+	background: linear-gradient(
 		90deg,
 		var(--main-color) 0% var(--text-inverse) 74%
 	);
@@ -561,6 +603,9 @@ div.name {
 }
 .btn:focus {
 	outline: none;
+}
+form {
+	margin: 0 0 0 3vw;
 }
 .form {
 	background-color: var(--text-inverse);
