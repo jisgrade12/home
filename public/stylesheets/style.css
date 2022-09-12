@@ -1187,22 +1187,30 @@ a:hover > h2 {
 	text-decoration-color: var(--text-color);
 }
 .game-placement {
-	height: 84vh;
+	height: 80vh;
 	display: grid;
-	grid-template-columns: 80% 20%;
+	grid-template-columns: 85% 15%;
 }
 .game-frame {
 	border: var(--main-color) 2px solid;
 	border-radius: 1vw;
-	width: 90%;
+	width: calc(100% - 3vw);
 	height: 80vh;
-	margin: 0 0 0 3vw;
+	margin: 0 0 0 2vw;
+}
+.fullScreen {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
 }
 .game-icons {
 	display: grid;
 	grid-template-rows: 33.33% 33.33% 33.33%;
 }
-.game-icons > a{
+.game-icons > a {
 	height: 100%;
 	width: 100%;
 }
@@ -1214,12 +1222,12 @@ a:hover > h2 {
 	transition: all 0.3s ease-in-out;
 	height: max-content;
 	width: max-content;
-	margin-left: 30%;
+	margin-left: 40%;
 	margin-top: 20%;
 	cursor: pointer;
 	display: block;
 }
-.game-icons .material-symbols-outlined{
+.game-icons .material-symbols-outlined {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -1230,26 +1238,36 @@ a:hover > h2 {
 	cursor: pointer;
 	display: block;
 }
-.game-icons a:hover{
+.game-icons a:hover {
 	color: var(--main-color);
 }
-.game-icons a:hover::after{
-	font-family: 'titillium web', sans-serif;
+.game-icons a:hover::after {
+	font-family: "titillium web", sans-serif;
 	font-size: 2vw;
 	display: flex;
 	text-align: center;
 	filter: opacity(1);
-	left: -20%;
+	left: -15%;
 	justify-content: center;
 	align-items: center;
 	position: relative;
 }
-.game-icons > a:nth-child(1):hover::after{
-	content: 'Fullscreen';
+.game-icons > a:nth-child(1):hover::after {
+	content: "Fullscreen";
 }
-.game-icons > a:nth-child(2):hover::after{
-	content: 'New Tab';
+.game-icons > a:nth-child(2):hover::after {
+	content: "Source";
 }
-.game-icons > a:nth-child(3):hover::after{
-	content: 'Games';
+.game-icons > a:nth-child(3):hover::after {
+	content: "Games";
+}
+#myInput {
+	background-repeat: no-repeat;
+	width: 88vw;
+	font-size: 2vw;
+	padding: 1vw 1vw 1vw 2vw;
+	margin: 2vw 0 1vw 7vw;
+}
+#myUL {
+	list-style-type: none;
 }
