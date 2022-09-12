@@ -107,13 +107,12 @@ span.hover-info {
 	justify-content: center;
 	align-items: center;
 	position: absolute;
+	top: 6vw;
+	margin-left: -2vw;
 	filter: opacity(0%);
 	background-color: var(--text-inverse);
 	height: 2vw;
 	transition: all 0.5s ease-in-out;
-	margin-left: -2vw;
-	margin-right: auto;
-	margin-top: 1.5vh;
 	font-size: 1.2vw;
 	border-radius: 0.5vw;
 	color: var(--text-color);
@@ -1172,9 +1171,40 @@ h6 {
 	font-size: 2vw;
 }
 .home-members .game-img img {
-	height: 5vw;
+	height: 8vw;
 }
 .member-link {
 	text-decoration: none;
 	color: inherit;
+}
+a > h2 {
+	transition: all 0.5s ease-in-out;
+	width: min-content;
+	display: flex;
+}
+a:hover > h2 {
+	color: var(--main-color);
+	text-decoration-color: var(--text-color);
+}
+.game-placement {
+	height: 84vh;
+	display: grid;
+	grid-template-columns: 80% 20%;
+}
+.game-frame {
+	border: var(--main-color) 2px solid;
+	border-radius: 1vw;
+	width: 90%;
+	height: 80vh;
+	margin: 0 0 0 3vw;
+}
+.game-icons {
+	display: grid;
+	grid-template-rows: 33.33% 33.33% 33.33%;
+}
+.game-icons > .material-symbols-outlined {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3vw;
 }
