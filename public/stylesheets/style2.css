@@ -1363,6 +1363,7 @@ a:hover > h2 {
 	font-size: 5vw;
 	margin: 3vw 1vw 1vw 1.5vw;
 	transition: all 1.5s ease-in-out;
+	border: var(--text-color) 0px solid;
 }
 .nigga-info:nth-child(1),
 .nigga-info:nth-child(4) {
@@ -1371,8 +1372,10 @@ a:hover > h2 {
 	background-color: var(--text-color);
 	color: var(--text-color);
 	box-sizing: border-box;
+	border: var(--text-color) 0px solid;
 	transition: all 1.5s ease-in-out;
 	transition: background-image 2s ease-in-out;
+	border-radius: 0;
 }
 .nigga-info:nth-child(1):hover,
 .nigga-info:nth-child(4):hover {
