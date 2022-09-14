@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Joan&family=Kdam+Thmor+Pro&family=Koulen&family=Titillium+Web&family=Tourney&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 :root {
 	--main-color: #14adaa;
 	--text-color: #ffffff;
@@ -9,6 +9,24 @@
 	color: white;
 	background: var(--main-color);
 }
+::-webkit-scrollbar {
+	width: 0.5vw;
+}
+::-webkit-scrollbar-track {
+	background: var(--text-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--text-inverse);
+}
+*,
+html {
+	scroll-behavior: smooth !important;
+}
 head,
 body {
 	scroll-behavior: smooth !important;
@@ -16,7 +34,7 @@ body {
 	height: 100%;
 	background-color: var(--text-color);
 	color: var(--text-inverse);
-	font-family: "titillium web", sans-serif;
+	font-family: "source sans pro", sans-serif;
 }
 a:not(.member-link, .home-blink) {
 	width: fit-content;
@@ -37,11 +55,11 @@ nav {
 	height: 7vh;
 	z-index: 1000;
 	background: #000000b8;
-	filter: blur(1px);
+	backdrop-filter: blur(4px);
 	transition: color 0.5s ease-in-out;
 	margin: 0;
 }
-div.nav-top{
+div.nav-top {
 	position: fixed;
 	width: 100%;
 	height: 7vh;
@@ -54,12 +72,11 @@ div.nav-top{
 	color: rgb(199, 199, 199);
 	font-size: 2.2vh;
 	margin: 0;
-
 }
-div.nav-elements{
+div.nav-elements {
 	margin: 0 2vw;
 }
-div.nav-top .material-symbols-outlined{
+div.nav-top .material-symbols-outlined {
 	font-size: 2.7vh;
 	color: rgb(231, 231, 231);
 	justify-content: center;
@@ -160,11 +177,11 @@ nav:hover #nav-name::after {
 }
 .nav-resistance {
 	height: 7vh;
-} 
+}
 .home-1 {
 	justify-content: center;
 	align-items: center;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: "Source Sans Pro", sans-serif;
 	font-size: 5vw;
 	font-weight: bold;
 	width: 100%;
@@ -172,24 +189,21 @@ nav:hover #nav-name::after {
 	background: var(--text-inverse);
 	color: var(--text-color);
 }
-.home-1 p{
+.home-1 p {
 	display: block;
 	width: 100%;
 	text-align: center;
 }
-.home-seperator{
+.home-seperator {
 	width: 100%;
 	height: 20vh;
 }
-.home-centered{
-	margin-bottom: -5vh;
-}
-.home-sub{
+.home-sub {
 	font-size: 3vw;
 	font-weight: normal;
-	margin-bottom: 5vh;
+	margin-top: -7vh;
 }
-.home-else{
+.home-else {
 	display: block;
 	width: 100%;
 	height: 100vh;
@@ -388,12 +402,10 @@ path:nth-child(even) {
 	margin-right: 1vw;
 }
 h2 {
-	font-family: "koulen", "titillium web", sans-serif;
-	font-weight: normal;
+	font-family: "source sans pro", "titillium web", sans-serif;
+	font-weight: bold;
 	font-size: 5vw;
 	margin: 3vw 0 0 3vw;
-	text-decoration: underline;
-	text-decoration-color: var(--main-color);
 }
 h3 {
 	font-weight: normal;
@@ -1296,7 +1308,7 @@ a:hover > h2 {
 #myUL {
 	list-style-type: none;
 }
-.home-button-learn{
+.home-button-learn {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -1311,31 +1323,117 @@ a:hover > h2 {
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
 }
-.home-button-learn:hover{
+.home-button-learn:hover {
 	background-color: #005bb6;
 }
-.home-button-learn::after{
+.home-button-learn::after {
 	transition: all 0.5s ease-in-out;
 	content: "\276F";
 	font-size: 1.5vw;
 	margin-left: -0.8vw;
 	color: transparent;
 }
-.home-button-learn:hover::after{
+.home-button-learn:hover::after {
 	font-size: 1.5vw;
 	margin-left: 0.5vw;
 	color: var(--text-color);
 }
-.nigga-holder{
+.nigga-holder {
 	display: grid;
 	grid-template-columns: 50% 50%;
 }
-.nigga-info{
-	font-family: ;
+.nigga-info:nth-child(1) {
+	background-color: var(--text-color);
+	color: var(--text-inverse);
+	border: 2px var(--text-inverse) solid;
+	box-sizing: border-box;
+	transition: all 0.5s ease-in-out;
+}
+.nigga-info:nth-child(1):hover {
+	background-color: var(--text-inverse);
+	color: var(--text-color);
+	border: 2px var(--text-color) solid;
+}
+.nigga-info:nth-child(1):hover div:nth-child(1) {
+	transition: all 0.5s ease-in-out;
+	transition-delay: 0s;
+	margin-top: -30vw;
+}
+.nigga-info:nth-child(1) div:nth-child(2):after {
+	width: fit-content;
+	content: "Zain is a part of the JIS School system since 2009 and is here to change the system for the better. It might be to easy to say so but he's got vision of a succession.";
+	display: block;
+	position: absolute;
+	color: transparent;
+	transition: all 0.5s ease-in-out;
+	font-size: 3vw;
+	margin-top: 1vw;
+	margin-left: -10vw;
+	margin-right: 55vw;
+	visibility: hidden;
+}
+.nigga-info:nth-child(1):hover div:nth-child(2):after {
+	color: grey;
+	visibility: visible;
+}
+.nigga-info:nth-child(2) {
+	background-color: var(--text-inverse);
+	color: var(--text-color);
+	box-sizing: border-box;
+	transition: all 0.5s ease-in-out;
+}
+.nigga-info:nth-child(2):hover {
+	background-color: var(--text-color);
+	color: var(--text-inverse);
+	border: 2px var(--text-inverse) solid;
+}
+.nigga-info:nth-child(2):hover div:nth-child(1) {
+	transition: all 0.5s ease-in-out;
+	transition-delay: 0s;
+	margin-top: -30vw;
+}
+.nigga-info:nth-child(2) div:nth-child(2):after {
+	width: fit-content;
+	content: "Saleh is a senior at Alhussan and states that he will make life easier and more manageable for the lower graders. He also stated that he loves them.";
+	display: block;
+	position: absolute;
+	color: transparent;
+	transition: all 0.5s ease-in-out;
+	font-size: 3vw;
+	margin-top: 1vw;
+	margin-left: -5vw;
+	margin-right: 5vw;
+	visibility: visible;
+}
+.nigga-info:nth-child(2):hover div:nth-child(2):after {
+	color: grey;
+	visibility: visible;
+}
+.nigga-info {
 	display: flex;
-	height: 100vh;
-	width: 100%;
+	flex-direction: column;
+	height: calc(100vh - 3vw);
+	width: calc(100% - 3vw);
 	justify-content: center;
 	align-items: center;
 	font-size: 5vw;
+	margin: 2vw;
+	transition: all 0.5s ease-in-out;
+}
+.nigga-info div:nth-child(1) {
+	font-weight: bold;
+}
+.home-else:nth-child(2):hover li:nth-child(odd):after {
+	content: ":";
+}
+li {
+	margin-left: 3vw;
+	font-size: 2.5vw;
+}
+li:nth-child(odd) {
+	font-weight: bold;
+}
+li:nth-child(even) {
+	list-style-type: none;
+	margin-bottom: 1vh;
 }
