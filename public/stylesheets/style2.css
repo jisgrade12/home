@@ -1353,6 +1353,17 @@ a:hover > h2 {
 	display: grid;
 	grid-template-columns: 50% 50%;
 }
+.nigga-info {
+	display: flex;
+	flex-direction: column;
+	height: calc(100vh - 3vw);
+	width: calc(100% - 3vw);
+	justify-content: center;
+	align-items: center;
+	font-size: 5vw;
+	margin: 3vw 1vw 1vw 1.5vw;
+	transition: all 1.5s ease-in-out;
+}
 .nigga-info:nth-child(1),
 .nigga-info:nth-child(4) {
 	background-image: url(../images/bg-green.png);
@@ -1360,7 +1371,7 @@ a:hover > h2 {
 	background-color: var(--text-color);
 	color: var(--text-color);
 	box-sizing: border-box;
-	transition: all 0.5s ease-in-out;
+	transition: all 1.5s ease-in-out;
 	transition: background-image 2s ease-in-out;
 }
 .nigga-info:nth-child(1):hover,
@@ -1369,6 +1380,7 @@ a:hover > h2 {
 	background-color: var(--text-inverse);
 	color: var(--text-color);
 	border: var(--text-color) 0.5vw solid;
+	border-radius: 0 3vw;
 }
 .nigga-info:nth-child(1):hover div:nth-child(1),
 .nigga-info:nth-child(4):hover div:nth-child(1) {
@@ -1409,6 +1421,7 @@ a:hover > h2 {
 .nigga-info:nth-child(3):hover {
 	background-image: url(../images/bg-green.png);
 	border: none;
+	border-radius: 3vw 0;
 }
 .nigga-info:nth-child(2):hover div:nth-child(1),
 .nigga-info:nth-child(3):hover div:nth-child(1) {
@@ -1434,17 +1447,6 @@ a:hover > h2 {
 .nigga-info:nth-child(3):hover div:nth-child(2):after {
 	color: grey;
 	visibility: visible;
-}
-.nigga-info {
-	display: flex;
-	flex-direction: column;
-	height: calc(100vh - 3vw);
-	width: calc(100% - 3vw);
-	justify-content: center;
-	align-items: center;
-	font-size: 5vw;
-	margin: 3vw 1vw 1vw 1.5vw;
-	transition: all 0.5s ease-in-out;
 }
 .nigga-info div:nth-child(1) {
 	font-weight: bold;
@@ -1482,10 +1484,12 @@ li:nth-child(even) {
 	transition: all 2s ease-in-out;
 	color: var(--text-color);
 	box-sizing: border-box;
+	z-index: 800;
 }
 .nigger:hover {
 	z-index: 900;
 	border: var(--text-color) 0.5vw solid;
+	border-radius: 3vw;
 }
 .nigger:nth-child(2n-1):hover {
 	width: calc(200% - 3vw);
