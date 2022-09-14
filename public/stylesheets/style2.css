@@ -186,8 +186,18 @@ nav:hover #nav-name::after {
 	font-weight: bold;
 	width: 100%;
 	height: 100vh;
-	background: var(--text-inverse);
 	color: var(--text-color);
+	background-image: url(../images/black.png);
+	animation: wallpaper-bg 20s linear infinite alternate;
+	background-size: cover;
+}
+@keyframes wallpaper-bg {
+	from {
+		background-image: url(../images/black.png);
+	}
+	to {
+		background-image: url(../images/bg-green.png);
+	}
 }
 .home-1 p {
 	display: block;
@@ -206,7 +216,6 @@ nav:hover #nav-name::after {
 .home-else {
 	display: block;
 	width: 100%;
-	height: 100vh;
 	background: var(--text-color);
 	color: var(--text-inverse);
 }
@@ -1342,26 +1351,28 @@ a:hover > h2 {
 	display: grid;
 	grid-template-columns: 50% 50%;
 }
-.nigga-info:nth-child(1) {
+.nigga-info:nth-child(2n-1) {
+	background-image: url(../images/bg-green.png);
+	background-size: cover;
 	background-color: var(--text-color);
-	color: var(--text-inverse);
-	border: 2px var(--text-inverse) solid;
+	color: var(--text-color);
 	box-sizing: border-box;
 	transition: all 0.5s ease-in-out;
+	transition: background-image 2s ease-in-out;
 }
-.nigga-info:nth-child(1):hover {
+.nigga-info:nth-child(2n-1):hover {
+	background-image: url(../images/black.png);
 	background-color: var(--text-inverse);
 	color: var(--text-color);
-	border: 2px var(--text-color) solid;
 }
-.nigga-info:nth-child(1):hover div:nth-child(1) {
+.nigga-info:nth-child(2n-1):hover div:nth-child(1) {
 	transition: all 0.5s ease-in-out;
 	transition-delay: 0s;
 	margin-top: -30vw;
 }
-.nigga-info:nth-child(1) div:nth-child(2):after {
+.nigga-info:nth-child(2n-1) div:nth-child(2):after {
 	width: fit-content;
-	content: "Zain is a part of the JIS School system since 2009 and is here to change the system for the better. It might be to easy to say so but he's got vision of a succession.";
+	content: "Zain is a part of the JIS School system since 2009 and is here to change the system for the better. It might be to easy to say so but he's got vision of succession.";
 	display: block;
 	position: absolute;
 	color: transparent;
@@ -1372,27 +1383,27 @@ a:hover > h2 {
 	margin-right: 55vw;
 	visibility: hidden;
 }
-.nigga-info:nth-child(1):hover div:nth-child(2):after {
+.nigga-info:nth-child(2n-1):hover div:nth-child(2):after {
 	color: grey;
 	visibility: visible;
 }
-.nigga-info:nth-child(2) {
-	background-color: var(--text-inverse);
+.nigga-info:nth-child(2n) {
+	background-image: url(../images/black.png);
+	background-size: cover;
 	color: var(--text-color);
 	box-sizing: border-box;
 	transition: all 0.5s ease-in-out;
+	transition: background-image 2s ease-in-out;
 }
-.nigga-info:nth-child(2):hover {
-	background-color: var(--text-color);
-	color: var(--text-inverse);
-	border: 2px var(--text-inverse) solid;
+.nigga-info:nth-child(2n):hover {
+	background-image: url(../images/bg-green.png);
 }
-.nigga-info:nth-child(2):hover div:nth-child(1) {
+.nigga-info:nth-child(2n):hover div:nth-child(1) {
 	transition: all 0.5s ease-in-out;
 	transition-delay: 0s;
 	margin-top: -30vw;
 }
-.nigga-info:nth-child(2) div:nth-child(2):after {
+.nigga-info:nth-child(2n) div:nth-child(2):after {
 	width: fit-content;
 	content: "Saleh is a senior at Alhussan and states that he will make life easier and more manageable for the lower graders. He also stated that he loves them.";
 	display: block;
@@ -1405,7 +1416,7 @@ a:hover > h2 {
 	margin-right: 5vw;
 	visibility: visible;
 }
-.nigga-info:nth-child(2):hover div:nth-child(2):after {
+.nigga-info:nth-child(2n):hover div:nth-child(2):after {
 	color: grey;
 	visibility: visible;
 }
@@ -1423,12 +1434,13 @@ a:hover > h2 {
 .nigga-info div:nth-child(1) {
 	font-weight: bold;
 }
-.home-else:nth-child(2):hover li:nth-child(odd):after {
+.home-else:nth-child(2):hover li:nth-child(2n-1):after {
 	content: ":";
 }
 li {
 	margin-left: 3vw;
-	font-size: 2.5vw;
+	margin-right: 3vw;
+	font-size: 2vw;
 }
 li:nth-child(odd) {
 	font-weight: bold;
