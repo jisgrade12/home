@@ -217,7 +217,7 @@ nav:hover #nav-name::after {
 .home-else {
 	display: block;
 	width: 100%;
-	background: var(--text-color);
+	background: var(--text-inverse);
 	color: var(--text-inverse);
 }
 .home-404 {
