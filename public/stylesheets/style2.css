@@ -1364,6 +1364,7 @@ a:hover > h2 {
 	margin: 3vw 1vw 1vw 1.5vw;
 	transition: all 1.5s ease-in-out;
 	border: var(--text-color) 0px solid;
+	box-sizing: border-box;
 }
 .nigga-info:nth-child(1),
 .nigga-info:nth-child(4) {
@@ -1373,8 +1374,7 @@ a:hover > h2 {
 	color: var(--text-color);
 	box-sizing: border-box;
 	border: var(--text-color) 0px solid;
-	transition: all 1.5s ease-in-out;
-	transition: background-image 2s ease-in-out;
+	transition: all 1s ease-in-out;
 	border-radius: 0;
 }
 .nigga-info:nth-child(1):hover,
@@ -1416,8 +1416,7 @@ a:hover > h2 {
 	background-size: cover;
 	color: var(--text-color);
 	box-sizing: border-box;
-	transition: all 0.5s ease-in-out;
-	transition: background-image 2s ease-in-out;
+	transition: all 1s ease-in-out;
 	border: var(--text-color) 0.5vw solid;
 }
 .nigga-info:nth-child(2):hover,
