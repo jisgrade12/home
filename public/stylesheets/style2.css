@@ -13,15 +13,16 @@
 	width: 0.5vw;
 }
 ::-webkit-scrollbar-track {
-	background: var(--text-color);
+	background: var(--text-inverse);
 }
 
 ::-webkit-scrollbar-thumb {
 	background: #888;
+	border-radius: 1vw;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: var(--text-inverse);
+	background: var(--text-color);
 }
 *,
 html {
@@ -32,8 +33,8 @@ body {
 	scroll-behavior: smooth !important;
 	margin: 0px;
 	height: 100%;
-	background-color: var(--text-color);
-	color: var(--text-inverse);
+	background-color: var(--text-inverse);
+	color: var(--text-color);
 	font-family: "source sans pro", sans-serif;
 }
 a:not(.member-link, .home-blink) {
@@ -1352,7 +1353,8 @@ a:hover > h2 {
 	display: grid;
 	grid-template-columns: 50% 50%;
 }
-.nigga-info:nth-child(2n-1) {
+.nigga-info:nth-child(1),
+.nigga-info:nth-child(4) {
 	background-image: url(../images/bg-green.png);
 	background-size: cover;
 	background-color: var(--text-color);
@@ -1361,17 +1363,21 @@ a:hover > h2 {
 	transition: all 0.5s ease-in-out;
 	transition: background-image 2s ease-in-out;
 }
-.nigga-info:nth-child(2n-1):hover {
+.nigga-info:nth-child(1):hover,
+.nigga-info:nth-child(4):hover {
 	background-image: url(../images/black.png);
 	background-color: var(--text-inverse);
 	color: var(--text-color);
+	border: var(--text-color) 0.5vw solid;
 }
-.nigga-info:nth-child(2n-1):hover div:nth-child(1) {
+.nigga-info:nth-child(1):hover div:nth-child(1),
+.nigga-info:nth-child(4):hover div:nth-child(1) {
 	transition: all 0.5s ease-in-out;
 	transition-delay: 0s;
 	margin-top: -30vw;
 }
-.nigga-info:nth-child(2n-1) div:nth-child(2):after {
+.nigga-info:nth-child(1) div:nth-child(2):after,
+.nigga-info:nth-child(4) div:nth-child(2):after {
 	width: fit-content;
 	content: "Zain is a part of the JIS School system since 2009 and is here to change the system for the better. It might be to easy to say so but he's got vision of succession.";
 	display: block;
@@ -1384,27 +1390,34 @@ a:hover > h2 {
 	margin-right: 55vw;
 	visibility: hidden;
 }
-.nigga-info:nth-child(2n-1):hover div:nth-child(2):after {
+.nigga-info:nth-child(1):hover div:nth-child(2):after,
+.nigga-info:nth-child(4):hover div:nth-child(2):after {
 	color: grey;
 	visibility: visible;
 }
-.nigga-info:nth-child(2n) {
+.nigga-info:nth-child(2),
+.nigga-info:nth-child(3) {
 	background-image: url(../images/black.png);
 	background-size: cover;
 	color: var(--text-color);
 	box-sizing: border-box;
 	transition: all 0.5s ease-in-out;
 	transition: background-image 2s ease-in-out;
+	border: var(--text-color) 0.5vw solid;
 }
-.nigga-info:nth-child(2n):hover {
+.nigga-info:nth-child(2):hover,
+.nigga-info:nth-child(3):hover {
 	background-image: url(../images/bg-green.png);
+	border: none;
 }
-.nigga-info:nth-child(2n):hover div:nth-child(1) {
+.nigga-info:nth-child(2):hover div:nth-child(1),
+.nigga-info:nth-child(3):hover div:nth-child(1) {
 	transition: all 0.5s ease-in-out;
 	transition-delay: 0s;
 	margin-top: -30vw;
 }
-.nigga-info:nth-child(2n) div:nth-child(2):after {
+.nigga-info:nth-child(2) div:nth-child(2):after,
+.nigga-info:nth-child(3) div:nth-child(2):after {
 	width: fit-content;
 	content: "Saleh is a senior at Alhussan and states that he will make life easier and more manageable for the lower graders. He also has stated that he will make events specific to one's wishes and requirements.";
 	display: block;
@@ -1417,7 +1430,8 @@ a:hover > h2 {
 	margin-right: 5vw;
 	visibility: visible;
 }
-.nigga-info:nth-child(2n):hover div:nth-child(2):after {
+.nigga-info:nth-child(2):hover div:nth-child(2):after,
+.nigga-info:nth-child(3):hover div:nth-child(2):after {
 	color: grey;
 	visibility: visible;
 }
@@ -1452,7 +1466,7 @@ li:nth-child(even) {
 }
 .another-nigga {
 	display: grid;
-	grid-template-columns: 100%;
+	grid-template-columns: 50% 50%;
 	height: 100vh;
 }
 .nigger {
@@ -1460,13 +1474,27 @@ li:nth-child(even) {
 	display: flex;
 	flex-direction: column;
 	height: calc(100vh - 3vw);
-	width: calc(50% - 3vw);
+	width: calc(100% - 3vw);
 	justify-content: center;
 	align-items: center;
 	font-size: 5vw;
-	margin: 2vw;
-	transition: all 0.5s ease-in-out;
+	margin: 3vw 1vw 1vw 1.5vw;
+	transition: all 2s ease-in-out;
+	color: var(--text-color);
+	box-sizing: border-box;
 }
 .nigger:hover {
-	width: calc(100% - 3vw);
+	z-index: 900;
+	border: var(--text-color) 0.5vw solid;
+}
+.nigger:nth-child(2n-1):hover {
+	width: calc(200% - 3vw);
+}
+.nigger:nth-child(2n):hover {
+	margin-left: -97%;
+	width: calc(200% - 3vw);
+}
+.nigger h2,
+.nigger h3 {
+	margin: 0 3vw;
 }
