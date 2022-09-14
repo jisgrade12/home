@@ -187,6 +187,7 @@ nav:hover #nav-name::after {
 	width: 100%;
 	height: 100vh;
 	color: var(--text-color);
+	background-color: var(--text-inverse);
 	background-image: url(../images/black.png);
 	animation: wallpaper-bg 20s linear infinite alternate;
 	background-size: cover;
