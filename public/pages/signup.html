@@ -71,6 +71,50 @@
 		<div class="nav-resistance" id="tp"></div>
 		<h2 style="margin-left: 12%">Sign Up</h2>
 		<center>
+			<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+			<script>
+				import { initializeApp } from "firebase/app";
+				import { getDatabase } from "firebase/database";
+				var firebaseConfig = {
+					apiKey: "AIzaSyC0xyTcV8cLK_ducPzzXJOCDXwtcuU8qOI",
+					authDomain: "jis-grade12.firebaseapp.com",
+					databaseURL:
+						"https://jis-grade12-default-rtdb.asia-southeast1.firebasedatabase.app",
+					projectId: "jis-grade12",
+					storageBucket: "jis-grade12.appspot.com",
+					messagingSenderId: "189452419298",
+					appId: "1:189452419298:web:0ac371b7484ea023865ebb",
+					measurementId: "G-349L78RWFM",
+				};
+				firebase.initializeApp(config);
+				function writeData() {
+					firebase
+						.database()
+						.ref("User")
+						.set({
+							name: document.getElementById("username").value,
+							age: document.getElementById("register-password").value,
+						});
+					I;
+					getData();
+				}
+				function getData() {
+					firebase
+						.database()
+						.ref("/")
+						.once("value", function (snapshot) {
+							snapshot.forEach(function (childSnapshot) {
+								var childKey = childSnapshot.key;
+								var childData = childSnapshot.val();
+								document.getElementById("data").innerHTML =
+									childData["name"] + ", " + childData["age"];
+							});
+						});
+				}
+				getData();
+			</script>
+
+			<p id="data"></p>
 			<form>
 				<label for="name"
 					><span class="material-symbols-outlined"> person </span> Name</label
@@ -110,6 +154,7 @@
 					placeholder="Username"
 					required
 					class="username"
+					id="username"
 				/><input
 					type="text"
 					name="rollno"
@@ -160,7 +205,9 @@
 					hidden
 					id=""
 				/>
-				<input type="submit" value="Sign Up" id="register-btn" />
+				<button value="Sign Up" id="register-btn" onclick="writeData()">
+					Submit
+				</button>
 				<a class="form-links" href="signin.html">Already have an account?</a>
 			</form>
 		</center>
