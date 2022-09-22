@@ -1303,7 +1303,7 @@ a:hover > h2 {
 	background-position-x: center;
 	background-size: 100% auto;
 	overflow: hidden;
-	transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out, background-position 0s ease-in-out;
 	box-sizing: border-box;
 	margin-top: 3vw;
 }
@@ -1311,7 +1311,8 @@ a:hover > h2 {
 	background-image: var(--text-color);
 	border: var(--main-color) 0.3vw solid;
 	background-color: transparent;
-	background-size: 10000%;
+	background-size: 100000%;
+	background-position: center;
 	margin-top: -0.7vw;
 	box-shadow: var(--main-color) 0.5vw 0.5vw 2vw;
 	color: #8b8b8b;
