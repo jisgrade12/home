@@ -1285,49 +1285,134 @@ a:hover > h2 {
 #myUL {
 	list-style-type: none;
 }
-.document-holder{
+.document-holder {
 	display: grid;
-	margin-left: 2%;
 	grid-template-columns: 20% 20% 20% 20% 20%;
 }
-.document-holder > div{
+.document-holder > li > div {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-color: #ffffff;
 	color: #000000;
 	width: 90%;
-	height: 30vw;
+	height: calc(360px + 3vw + 2vw + 3vw);
 	border-radius: 1vw;
 	flex-direction: column;
 	background-repeat: no-repeat;
 	background-position-x: center;
 	background-size: 100% auto;
 	overflow: hidden;
+	transition: all 1s ease-in-out;
+	box-sizing: border-box;
+	margin-top: 3vw;
 }
-.document-holder > div:nth-child(1){
-	background-image: url(../images/chemistry_course.jpg);
+.document-holder > li > div:hover {
+	background-image: var(--text-color);
+	border: var(--main-color) 0.3vw solid;
+	background-color: transparent;
+	background-size: 10000%;
+	margin-top: -0.7vw;
+	box-shadow: var(--main-color) 0.5vw 0.5vw 2vw;
+	color: #8b8b8b;
+	text-shadow: #000000 1px 1px 5px;
 }
-.document-holder > div:nth-child(2){
-	background-image: url(../images/physics_course.jpg);
+.document-holder > li > div:hover > div:nth-child(1) {
+	margin: 0;
+	color: var(--main-color);
 }
-.document-holder > div:nth-child(3){
-	background-image: url(../images/biology_course.jpg);
-}
-.document-holder > div:nth-child(4){
-	background-image: url(../images/english_course.jpg);
-}
-.document-holder > div:nth-child(5){
-	background-image: url(../images/english_course.jpg);
-}
-.document-holder > div > div:nth-child(1){
-	font-family: 'koulen', sans-serif;
+.document-holder > li > div > div:nth-child(1) {
+	transition: all 0.7s ease-in-out;
+	font-family: "koulen", sans-serif;
 	font-size: 3vw;
-	margin-top: 22vw;
+	margin-top: 26vw;
 }
-.document-holder > div > div:nth-child(2){
-	font-family: 'koulen', sans-serif;
+.document-holder > li > div > div:nth-child(2) {
+	font-family: "koulen", sans-serif;
 	font-weight: lighter;
 	font-size: 2vw;
 	margin-top: -1vw;
+}
+.document-holder > li > div > div:nth-child(3) {
+	font-size: 2.7vw;
+	margin-top: 1vw;
+	margin-bottom: 1vw;
+}
+.document-holder > li > div > div:nth-child(3) a:nth-child(2) {
+	margin-left: -2vw;
+}
+.document-holder > li > div > div:nth-child(3) a {
+	transition: all 0.5s ease-in-out;
+}
+.document-holder > li > div > div:nth-child(3) a:hover {
+	color: var(--main-color);
+}
+.document-holder > li:nth-child(1) > div {
+	background-image: url(../images/chemistry_course.jpg);
+}
+.document-holder > li:nth-child(2) > div {
+	background-image: url(https://images-na.ssl-images-amazon.com/images/I/511YRV8OLdL.jpg);
+}
+.document-holder > li:nth-child(3) > div {
+	background-image: url(https://images-na.ssl-images-amazon.com/images/I/41nd9fW1LVL.jpg);
+}
+.document-holder > li:nth-child(4) > div {
+	background-image: url(https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/1088/9781108859035.jpg);
+}
+.document-holder > li:nth-child(5) > div {
+	background-image: url(https://images-na.ssl-images-amazon.com/images/I/41qowZG3hJL._SX380_BO1,204,203,200_.jpg);
+}
+.document-holder > li:nth-child(6) > div {
+	background-image: url(../images/physicswork.jpg);
+}
+.document-holder > li:nth-child(7) > div {
+	background-image: url(https://assets.cambridge.org/97811084/07267/cover/9781108407267.jpg);
+}
+.document-holder > li:nth-child(8) > div {
+	background-image: url(https://assets.cambridge.org/97811087/58925/cover/9781108758925.jpg);
+}
+.document-holder > li:nth-child(9) > div {
+	background-image: url(https://images-na.ssl-images-amazon.com/images/I/51o7rTFnQZL._SX498_BO1,204,203,200_.jpg);
+}
+.document-holder > li:nth-child(10) > div {
+	background-image: url(https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/1084/9781108407199.jpg);
+}
+.document-holder > li:nth-child(11) > div {
+	background-image: url(https://assets.cambridge.org/97811087/58901/cover/9781108758901.jpg);
+}
+.document-holder > li:nth-child(12) > div {
+	background-image: url(https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/1084/9781108457675.jpg);
+}
+.document-holder > li:nth-child(13) > div {
+	background-image: url(../images/english_course.jpg);
+}
+.document-holder > li:nth-child(14) > div {
+	background-image: url(../images/businesscourse.jpg);
+}
+.document-holder > li:nth-child(15) > div {
+	background-image: url(../images/biology_course.jpg);
+}
+.document-holder > li:nth-child(16) > div {
+	background-image: url(https://images-na.ssl-images-amazon.com/images/I/417CKQhKBTL._SX512_BO1,204,203,200_.jpg);
+}
+.document-holder > li:nth-child(17) > div {
+	background-image: url(https://images-na.ssl-images-amazon.com/images/I/412gOcd1HLL._SX397_BO1,204,203,200_.jpg);
+}
+.document-holder > li:nth-child(18) > div {
+	background-image: url(https://images-na.ssl-images-amazon.com/images/I/416XDE0R32L.jpg);
+}
+.document-holder > li:nth-child(19) > div {
+	background-image: url(https://images-na.ssl-images-amazon.com/images/I/411OyUoJykL.jpg);
+}
+.document-holder > li:nth-child(20) > div {
+	background-image: url(https://cdn.shopify.com/s/files/1/0606/3277/products/9781108716291.jpg?v=1580120077);
+}
+.document-holder > li:nth-child(21) > div {
+	background-image: url(../images/itcourse.jpg);
+}
+.document-holder > li:nth-child(22) > div {
+	background-image: url(../images/itwork.jpg);
+}
+.document-holder > li:nth-child(23) > div {
+	background-image: url(https://m.media-amazon.com/images/I/4180Ur2STKL._AC_SY1000_.jpg);
 }
