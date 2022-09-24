@@ -1,41 +1,42 @@
-/*/(function () {
-	const second = 1000,
-		minute = second * 60,
-		hour = minute * 60,
-		day = hour * 24;
-
-	let today = new Date(),
-		dd = String(today.getDate()).padStart(2, "0"),
-		mm = String(today.getMonth() + 1).padStart(2, "0"),
-		yyyy = today.getFullYear(),
-		dayMonth = "09/30/",
-		birthday = dayMonth + yyyy;
-
-	today = mm + "/" + dd + "/" + yyyy;
-	if (today > birthday) {
-		birthday = dayMonth + nextYear;
-	}
-
-	const countDown = new Date(birthday).getTime(),
-		x = setInterval(function () {
-			const now = new Date().getTime(),
-				distance = countDown - now;
-
-			(document.getElementById("days").innerText = Math.floor(distance / day)),
-				(document.getElementById("hours").innerText = Math.floor(
-					(distance % day) / hour
-				)),
-				(document.getElementById("minutes").innerText = Math.floor(
-					(distance % hour) / minute
-				)),
-				(document.getElementById("seconds").innerText = Math.floor(
-					(distance % minute) / second
-				));
-			if (distance < 0) {
-				document.getElementById("headline").innerText = "It's my birthday!";
-				document.getElementById("countdown").style.display = "none";
-				document.getElementById("content").style.display = "block";
-				clearInterval(x);
-			}
-		}, 0);
-})();
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+const firebaseConfig = {
+	apiKey: "AIzaSyC0xyTcV8cLK_ducPzzXJOCDXwtcuU8qOI",
+	authDomain: "jis-grade12.firebaseapp.com",
+	databaseURL:
+		"https://jis-grade12-default-rtdb.asia-southeast1.firebasedatabase.app",
+	projectId: "jis-grade12",
+	storageBucket: "jis-grade12.appspot.com",
+	messagingSenderId: "189452419298",
+	appId: "1:189452419298:web:0ac371b7484ea023865ebb",
+	measurementId: "G-349L78RWFM",
+};
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const db = firebase.database();
+const username = prompt("Please Tell Us Your Name");
+document.getElementById("message-form").addEventListener("submit", sendMessage);
+function sendMessage(e) {
+	e.preventDefault();
+	const timestamp = Date.now();
+	const messageInput = document.getElementById("message-input");
+	const message = messageInput.value;
+	messageInput.value = "";
+	document.getElementById("messages").scrollIntoView({
+		behavior: "smooth",
+		block: "end",
+		inline: "nearest",
+	});
+	db.ref("messages/" + timestamp).set({
+		username,
+		message,
+	});
+}
+const fetchChat = db.ref("messages/");
+fetchChat.on("child_added", function (snapshot) {
+	const messages = snapshot.val();
+	const message = `<li class=${
+		username === messages.username ? "sent" : "receive"
+	}><span>${messages.username}: </span>${messages.message}</li>`;
+	document.getElementById("messages").innerHTML += message;
+});

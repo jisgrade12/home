@@ -220,15 +220,17 @@ select {
 input.name {
 	width: 45%;
 }
+button.msg:focus,
 input:focus,
 select:focus {
 	color: var(--main-color);
 }
+button.msg:hover,
 input:hover,
 select:hover {
 	color: #d7d7d7a7;
 	filter: drop-shadow(var(--text-inverse) 4px 4px 4px);
-	transform: translateY(-10px);
+	transform: translateY(-5px);
 	text-shadow: #0000006b 1px 1px 22px;
 	background-color: #ffffff24;
 	color: #d7d7d7;
@@ -1426,4 +1428,60 @@ a:hover > h2 {
 }
 .document-holder > li:nth-child(23) > div {
 	background-image: url(https://m.media-amazon.com/images/I/4180Ur2STKL._AC_SY1000_.jpg);
+}
+#messages {
+	padding-bottom: 10%;
+}
+#chat {
+	width: 80%;
+	margin: auto;
+}
+#message-form {
+	text-align: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 90vw;
+	background-color: #b4b4b4b4;
+	margin: 0;
+}
+input.chat {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 70%;
+	height: 30px;
+	padding: 2vw;
+}
+
+button.msg {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.5vw;
+	width: 20%;
+	height: 30px;
+	padding: 2vw;
+	font-size: 2vw;
+	transition: all 0.5s ease-in-out;
+	font-family: "titillium web", sans-serif;
+	cursor: pointer;
+}
+button.msg .material-symbols-outlined {
+	font-size: 2vw;
+	transition: all 0.5s ease-in-out;
+}
+button.msg:hover .material-symbols-outlined {
+	font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.sent {
+	text-align: right;
+	background-color: #a79cb3;
+	margin-left: 50%;
+}
+
+.sent span {
+	margin-left: 5px;
+	color: var(--main-color);
 }
