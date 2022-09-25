@@ -1,5 +1,5 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+import { analytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
 const firebaseConfig = {
 	apiKey: "AIzaSyC0xyTcV8cLK_ducPzzXJOCDXwtcuU8qOI",
 	authDomain: "jis-grade12.firebaseapp.com",
@@ -9,10 +9,10 @@ const firebaseConfig = {
 	storageBucket: "jis-grade12.appspot.com",
 	messagingSenderId: "189452419298",
 	appId: "1:189452419298:web:0ac371b7484ea023865ebb",
-	measurementId: "G-349L78RWFM",
 };
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
 const db = firebase.database();
 const username = prompt("Please Tell Us Your Name");
 document.getElementById("message-form").addEventListener("submit", sendMessage);
