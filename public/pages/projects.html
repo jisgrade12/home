@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="../images/12_l.png" />
+		<link rel="stylesheet" href="../stylesheets/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+		<title>Grade 12 | Projects</title>
+	</head>
+	<body>
+		<nav>
+			<a href="../index.html"
+				><img src="../images/12_s.png" alt="Grade 12 Logo"
+			/></a>
+			<h1 id="nav-name">Projects</h1>
+			<span class="pages"
+				><a href="../index.html"
+					><span class="material-symbols-outlined">
+						home <span class="hover-info">Home</span></span
+					></a
+				><a href="members.html"
+					><span class="material-symbols-outlined">
+						group <span class="hover-info">Members</span></span
+					></a
+				><a href="documents.html"
+					><span class="material-symbols-outlined">
+						feed <span class="hover-info">Documents</span></span
+					></a
+				><a href="timeline.html"
+					><span class="material-symbols-outlined">
+						view_timeline <span class="hover-info">Timeline</span></span
+					></a
+				><a href="chat.html"
+					><span class="material-symbols-outlined">
+						chat <span class="hover-info">Chat</span></span
+					></a
+				><a href="calendar.html"
+					><span class="material-symbols-outlined">
+						calendar_month <span class="hover-info">Calendar</span></span
+					></a
+				><a href="countdown.html"
+					><span class="material-symbols-outlined">
+						hourglass_empty <span class="hover-info">Countdown(s)</span></span
+					></a
+				><a href="suggest.html"
+					><span class="material-symbols-outlined">
+						assistant <span class="hover-info">Suggestions</span></span
+					></a
+				><a href="games.html"
+					><span class="material-symbols-outlined">
+						stadia_controller <span class="hover-info">Games</span></span
+					></a
+				><a href="signup.html"
+					><span class="material-symbols-outlined">
+						account_circle <span class="hover-info">Account</span></span
+					></a
+				></span
+			>
+		</nav>
+		<div class="nav-resistance" id="tp"></div>
+		<h2>Science Fair</h2>
+		<center>
+			<input
+				type="text"
+				class="search-bar"
+				id="myInput0"
+				onkeyup="myFunction0()"
+				placeholder="🔍 Search for Projects"
+				style="margin: 0; width: 93vw"
+			/>
+		</center>
+		<ul class="projects-group" id="myUL0" style="padding: 0">
+			<li>
+				<a href="../images/Sizes.pptx" download>
+					<div class="projects-wrap">
+						<div>Sizes</div>
+						<div>
+							<img
+								src="https://cdn.pixabay.com/photo/2019/04/08/21/39/ruler-4113045_1280.png"
+								alt="Ruler"
+							/>
+						</div>
+						<div>Muhammad Arsalan</div>
+						<div>Individual</div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a
+					href="../images/Noise-cancellation system in earphones.pptx"
+					download
+				>
+					<div class="projects-wrap">
+						<div>Noise-cancellation</div>
+						<div>
+							<img
+								src="http://cdn.onlinewebfonts.com/svg/img_41144.png"
+								alt="Noise-cancellation"
+							/>
+						</div>
+						<div>Ahmed Sami</div>
+						<div>Individual</div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="../images/bg-green.png" download>
+					<div class="projects-wrap">
+						<div>Nothing</div>
+						<div>
+							<img
+								src="https://www.av.se/Static/images/placeholder.png"
+								alt="ph"
+							/>
+						</div>
+						<div>No-one</div>
+						<div>N/A</div>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<script>
+			function myFunction0() {
+				// Declare variables
+				var input, filter, ul, li, a, i, txtValue;
+				input = document.getElementById("myInput0");
+				filter = input.value.toUpperCase();
+				ul = document.getElementById("myUL0");
+				li = ul.getElementsByTagName("li");
+
+				// Loop through all list items, and hide those who don't match the search query
+				for (i = 0; i < li.length; i++) {
+					a = li[i].getElementsByTagName("div")[0];
+					txtValue = a.textContent || a.innerText;
+					if (txtValue.toUpperCase().indexOf(filter) > -1) {
+						li[i].style.display = "";
+					} else {
+						li[i].style.display = "none";
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
