@@ -1,13 +1,137 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Joan&family=Kdam+Thmor+Pro&family=Koulen&family=Titillium+Web&family=Tourney&display=swap");
-:root {
-	--main-color: #14adaa;
-	--text-color: #d7d7d7;
-	--text-inverse: #252525;
+@media (prefers-color-scheme: dark) {
+	:root {
+		--main-color: #14adaa;
+		--text-color: #d7d7d7;
+		--text-inverse: #252525;
+	}
+	.member:nth-child(odd),
+	.counters:nth-child(odd) {
+		background-color: white;
+		color: var(--text-inverse);
+	}
+	.member:nth-child(even),
+	.counters:nth-child(even) {
+		background-color: white;
+		color: var(--text-inverse);
+	}
+	.member:hover,
+	.counters:hover {
+		color: #d7d7d7a7;
+		filter: drop-shadow(var(--text-inverse) 4px 4px 4px);
+		transform: translateY(-10px);
+	}
+	.member:nth-child(odd):hover,
+	.counters:nth-child(odd):hover {
+		background-color: #ffffff24;
+		color: #d7d7d7;
+	}
+	.member:nth-child(even):hover,
+	.counters:nth-child(even):hover {
+		background-color: #23cbc924;
+		color: #d7d7d7;
+	}
+	.home-1,
+	.home-404 {
+		width: 100%;
+		height: 100vh;
+		background: #42a09f;
+		background: linear-gradient(
+			90deg,
+			rgb(29, 29, 29) 20%,
+			#42a09f 40%,
+			#42a09f 60%,
+			rgb(29, 29, 29) 80%
+		);
+		background-size: 500%;
+		filter: contrast(1);
+		animation: wallpaper 50s infinite linear;
+	}
+	.home-404 {
+		background: #bb1111;
+		background: linear-gradient(
+			90deg,
+			rgb(29, 29, 29) 20%,
+			#7d0b0b 40%,
+			#af1010 60%,
+			rgb(29, 29, 29) 80%
+		);
+		background-size: 500%;
+	}
+	path:nth-child(odd) {
+		fill: #bcbcbc16;
+	}
+	path:nth-child(even) {
+		fill: #d7d7d716;
+	}
 }
-::selection {
-	color: white;
-	background: var(--main-color);
+@media (prefers-color-scheme: light) {
+	:root {
+		--main-color: #14adaa;
+		--text-color: #252525;
+		--text-inverse: #f4f4f4;
+	}
+	.member:nth-child(odd),
+	.counters:nth-child(odd) {
+		background-color: white;
+		color: var(--text-color);
+	}
+	.member:nth-child(even),
+	.counters:nth-child(even) {
+		background-color: white;
+		color: var(--text-color);
+	}
+	.member:hover,
+	.counters:hover {
+		color: #696969a7;
+		filter: drop-shadow(var(--text-inverse) 4px 4px 4px);
+		transform: translateY(-10px);
+	}
+	.member:nth-child(odd):hover,
+	.counters:nth-child(odd):hover {
+		background-color: #ffffff24;
+		color: #696969;
+	}
+	.member:nth-child(even):hover,
+	.counters:nth-child(even):hover {
+		background-color: #23cbc924;
+		color: #696969;
+	}
+	.home-1,
+	.home-404 {
+		width: 100%;
+		height: 100vh;
+		background: #42a09f;
+		background: linear-gradient(
+			90deg,
+			#d7d7d7 20%,
+			#42a09f 40%,
+			#42a09f 60%,
+			#d7d7d7 80%
+		);
+		background-size: 500%;
+		filter: contrast(1);
+		animation: wallpaper 50s infinite linear;
+	}
+	.home-404 {
+		background: #bb1111;
+		background: linear-gradient(
+			90deg,
+			#d7d7d7 20%,
+			#7d0b0b 40%,
+			#af1010 60%,
+			#d7d7d7 80%
+		);
+		background-size: 500%;
+	}
+	path:nth-child(odd) {
+		fill: #6e6e6e16;
+	}
+	path:nth-child(even) {
+		fill: #51515116;
+	}
 }
+
 head,
 body {
 	scroll-behavior: smooth;
@@ -169,33 +293,6 @@ nav:hover #nav-name::after {
 .nav-resistance {
 	height: 8vw;
 }
-.home-1,
-.home-404 {
-	width: 100%;
-	height: 100vh;
-	background: #42a09f;
-	background: linear-gradient(
-		90deg,
-		rgb(29, 29, 29) 20%,
-		#42a09f 40%,
-		#42a09f 60%,
-		rgb(29, 29, 29) 80%
-	);
-	background-size: 500%;
-	filter: contrast(1);
-	animation: wallpaper 50s infinite linear;
-}
-.home-404 {
-	background: #bb1111;
-	background: linear-gradient(
-		90deg,
-		rgb(29, 29, 29) 20%,
-		#7d0b0b 40%,
-		#af1010 60%,
-		rgb(29, 29, 29) 80%
-	);
-	background-size: 500%;
-}
 @keyframes wallpaper {
 	to {
 		background-position: 300%;
@@ -215,7 +312,6 @@ select {
 	margin-top: 1vw;
 	background-color: white;
 	color: var(--text-inverse);
-	margin-left: %;
 }
 input.name {
 	width: 45%;
@@ -278,12 +374,7 @@ label:hover .material-symbols-outlined {
 	position: absolute;
 	z-index: -1;
 }
-path:nth-child(odd) {
-	fill: #bcbcbc16;
-}
-path:nth-child(even) {
-	fill: #d7d7d716;
-}
+
 .home-title,
 .for-title {
 	font-family: "koulen", sans-serif;
@@ -293,6 +384,7 @@ path:nth-child(even) {
 	transition: all 0.7s ease-in-out;
 	z-index: 100;
 	width: fit-content;
+	color: #d7d7d7;
 }
 .home-title:hover,
 .for-title:hover {
@@ -360,19 +452,19 @@ path:nth-child(even) {
 }
 .home-but:nth-child(odd):hover {
 	background-color: #ffffff24;
-	color: #d7d7d7;
+	color: #252525;
 }
 .home-but:nth-child(even):hover {
 	background-color: #23cbc924;
-	color: #d7d7d7;
+	color: #252525;
 }
 .home-but:nth-child(1) {
 	background-color: white;
-	color: var(--text-inverse);
+	color: #252525;
 }
 .home-but:nth-child(2) {
 	background-color: white;
-	color: var(--text-inverse);
+	color: #252525;
 }
 .button-holder .material-symbols-outlined {
 	font-size: 3vw;
@@ -429,32 +521,6 @@ h3 {
 	font-variation-settings: "FILL" 1, "wght" 350, "GRAD" 0, "opsz" 48;
 	transition: all 0.7s ease-in-out;
 	color: var(--text-color);
-}
-.member:hover,
-.counters:hover {
-	color: #d7d7d7a7;
-	filter: drop-shadow(var(--text-inverse) 4px 4px 4px);
-	transform: translateY(-10px);
-}
-.member:nth-child(odd):hover,
-.counters:nth-child(odd):hover {
-	background-color: #ffffff24;
-	color: #d7d7d7;
-}
-.member:nth-child(even):hover,
-.counters:nth-child(even):hover {
-	background-color: #23cbc924;
-	color: #d7d7d7;
-}
-.member:nth-child(odd),
-.counters:nth-child(odd) {
-	background-color: white;
-	color: var(--text-inverse);
-}
-.member:nth-child(even),
-.counters:nth-child(even) {
-	background-color: white;
-	color: var(--text-inverse);
 }
 .member > .name {
 	font-size: 3.5vw;
@@ -1558,4 +1624,10 @@ footer {
 	filter: contrast(1.05);
 	overflow: hidden;
 	color: var(--text-color);
+}
+.event-tooltip-content {
+	padding: 5px;
+}
+.event-tooltip-content:not(:last-child) {
+	border-bottom: 1px solid #ccc;
 }
