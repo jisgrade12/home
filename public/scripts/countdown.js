@@ -11,7 +11,8 @@ var x = setInterval(function () {
 		days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 	if (distance < 0) {
 		clearInterval(x);
-		document.getElementById("counter1").innerHTML = "Exam Ends";
+		document.getElementById("counter1").innerHTML =
+			"Exam Begins <span class='material-symbols-outlined'>book</span>";
 	}
 }, 1000);
 /* Second */
@@ -43,7 +44,8 @@ var x = setInterval(function () {
 		days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 	if (distance < 0) {
 		clearInterval(x);
-		document.getElementById("counter3").innerHTML = "Passed";
+		document.getElementById("counter3").innerHTML =
+			"School Starts <span class='material-symbols-outlined'>backpack</span>";
 	}
 }, 1000);
 /* Fourth */
@@ -75,7 +77,8 @@ var x = setInterval(function () {
 		days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 	if (distance < 0) {
 		clearInterval(x);
-		document.getElementById("counter5").innerHTML = "Exam Ends";
+		document.getElementById("counter5").innerHTML =
+			"Exam Begins <span class='material-symbols-outlined'>book</span>";
 	}
 }, 1000);
 /* Sixth */
@@ -107,7 +110,8 @@ var x = setInterval(function () {
 		days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 	if (distance < 0) {
 		clearInterval(x);
-		document.getElementById("counter7").innerHTML = "Passed";
+		document.getElementById("counter7").innerHTML =
+			"School Starts <span class='material-symbols-outlined'>backpack</span>";
 	}
 }, 1000);
 /* Eigth */
@@ -155,7 +159,8 @@ var x = setInterval(function () {
 		days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 	if (distance < 0) {
 		clearInterval(x);
-		document.getElementById("counter10").innerHTML = "Graduated!";
+		document.getElementById("counter10").innerHTML =
+			"Graduated! <span class='material-symbols-outlined'>school</span>";
 	}
 }, 1000);
 /* Eleventh */
@@ -171,7 +176,8 @@ var x = setInterval(function () {
 		days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 	if (distance < 0) {
 		clearInterval(x);
-		document.getElementById("counter11").innerHTML = "Exam Ends";
+		document.getElementById("counter11").innerHTML =
+			"Exam Begins <span class='material-symbols-outlined'>book</span>";
 	}
 }, 1000);
 /* Twelfth */
@@ -187,6 +193,7 @@ var x = setInterval(function () {
 		days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 	if (distance < 0) {
 		clearInterval(x);
-		document.getElementById("counter12").innerHTML = "Finally!";
+		document.getElementById("counter12").innerHTML =
+			"Finally! <span class='material-symbols-outlined'>flag</span>";
 	}
 }, 1000);

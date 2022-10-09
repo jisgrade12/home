@@ -483,6 +483,15 @@ h3 {
 .counters > .counter {
 	font-family: "koulen", sans-serif;
 	font-size: 4vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.counters > .counter > .material-symbols-outlined {
+	font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 0, "opsz" 48;
+}
+.counters:hover > .counter > .material-symbols-outlined {
+	font-variation-settings: "FILL" 1, "wght" 600, "GRAD" 0, "opsz" 48;
 }
 .counters > .role {
 	font-size: 2vw;
