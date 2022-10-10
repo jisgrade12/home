@@ -522,6 +522,11 @@ h3 {
 	transition: all 0.7s ease-in-out;
 	color: var(--text-color);
 }
+.member:hover,
+.counters:hover {
+	color: var(--text-color);
+	box-shadow: var(--text-color) 10px 10px 10px;
+}
 .member > .name {
 	font-size: 3.5vw;
 	font-family: "koulen", sans-serif;
