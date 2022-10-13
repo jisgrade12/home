@@ -1,235 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/x-icon" href="../images/12_l.png" />
-		<link rel="stylesheet" href="../stylesheets/style.css" />
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-		/>
-		<script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
-		<link
-			type="text/css"
-			rel="stylesheet"
-			href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css"
-		/>
-		<title>Grade 12 | Sign Up</title>
-		<script type="text/javascript">
-			window.$crisp = [];
-			window.CRISP_WEBSITE_ID = "dabd32ac-0dd3-4b77-9001-dcbe68217c70";
-			(function () {
-				d = document;
-				s = d.createElement("script");
-				s.src = "https://client.crisp.chat/l.js";
-				s.async = 1;
-				d.getElementsByTagName("head")[0].appendChild(s);
-			})();
-		</script>
-	</head>
-	<body>
-		<nav>
-			<a href="../index.html"
-				><img src="../images/12_s.png" alt="Grade 12 Logo"
-			/></a>
-			<h1 id="nav-name">Sign Up</h1>
-			<span class="pages"
-				><a href="../index.html"
-					><span class="material-symbols-outlined">
-						home <span class="hover-info">Home</span></span
-					></a
-				><a href="members.html"
-					><span class="material-symbols-outlined">
-						group <span class="hover-info">Members</span></span
-					></a
-				><a href="documents.html"
-					><span class="material-symbols-outlined">
-						feed <span class="hover-info">Documents</span></span
-					></a
-				><a href="timeline.html"
-					><span class="material-symbols-outlined">
-						view_timeline <span class="hover-info">Timeline</span></span
-					></a
-				><a href="chat.html"
-					><span class="material-symbols-outlined">
-						chat <span class="hover-info">Chatting</span></span
-					></a
-				><a href="calendar.html"
-					><span class="material-symbols-outlined">
-						calendar_month <span class="hover-info">Calendar</span></span
-					></a
-				><a href="countdown.html"
-					><span class="material-symbols-outlined">
-						hourglass_empty <span class="hover-info">Countdown(s)</span></span
-					></a
-				><a href="suggest.html"
-					><span class="material-symbols-outlined">
-						assistant <span class="hover-info">Suggestions</span></span
-					></a
-				><a href="games.html"
-					><span class="material-symbols-outlined">
-						stadia_controller <span class="hover-info">Games</span></span
-					></a
-				><a href="account.html" id="activated"
-					><span class="material-symbols-outlined">
-						account_circle <span class="hover-info">Account</span></span
-					></a
-				></span
-			>
-		</nav>
-		<div class="nav-resistance" id="tp"></div>
-		<h2 style="margin-left: 12%">Sign Up</h2>
-		<center>
-			<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
-			<script>
-				import { initializeApp } from "firebase/app";
-				import { getDatabase } from "firebase/database";
-				var firebaseConfig = {
-					apiKey: "AIzaSyC0xyTcV8cLK_ducPzzXJOCDXwtcuU8qOI",
-					authDomain: "jis-grade12.firebaseapp.com",
-					databaseURL:
-						"https://jis-grade12-default-rtdb.asia-southeast1.firebasedatabase.app",
-					projectId: "jis-grade12",
-					storageBucket: "jis-grade12.appspot.com",
-					messagingSenderId: "189452419298",
-					appId: "1:189452419298:web:0ac371b7484ea023865ebb",
-					measurementId: "G-349L78RWFM",
-				};
-				firebase.initializeApp(config);
-				function writeData() {
-					firebase
-						.database()
-						.ref("User")
-						.set({
-							name: document.getElementById("username").value,
-							age: document.getElementById("register-password").value,
-						});
-					I;
-					getData();
-				}
-				function getData() {
-					firebase
-						.database()
-						.ref("/")
-						.once("value", function (snapshot) {
-							snapshot.forEach(function (childSnapshot) {
-								var childKey = childSnapshot.key;
-								var childData = childSnapshot.val();
-								document.getElementById("data").innerHTML =
-									childData["name"] + ", " + childData["age"];
-							});
-						});
-				}
-				getData();
-			</script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JIS | Grade 12" />
+    <meta
+      name="keywords"
+      content="Grade 12, 12, Class of 2023, Alhussan, JIS, Jubail, School, Jubail International School"
+    />
+    <meta name="author" content="Muhammad Arsalan" />
+    <meta property="og:title" content="JIS Grade 12 - Sign Up" />
+    <meta property="og:url" content="https://jis-grade12.web.app/" />
+    <meta
+      property="og:image"
+      content="https://jis-grade12.web.app/images/Grade12_logout.png"
+    />
+    <meta
+      property="og:description"
+      content="This is the Sign Up page for JIS Grade12 - You may make your account here. ^_____^"
+    />
+    <meta name="msapplication-TileColor" content="#14adaa" />
+    <meta name="theme-color" content="#14adaa" />
+    <link rel="icon" type="image/x-icon" href="../images/12_l.png" />
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css"
+    />
+    <title>Grade 12 | Sign Up</title>
+    <script type="text/javascript">
+      window.$crisp = [];
+      window.CRISP_WEBSITE_ID = "dabd32ac-0dd3-4b77-9001-dcbe68217c70";
+      (function () {
+        d = document;
+        s = d.createElement("script");
+        s.src = "https://client.crisp.chat/l.js";
+        s.async = 1;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script>
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html"
+        ><img src="../images/12_s.png" alt="Grade 12 Logo"
+      /></a>
+      <h1 id="nav-name">Sign Up</h1>
+      <span class="pages"
+        ><a href="../index.html"
+          ><span class="material-symbols-outlined">
+            home <span class="hover-info">Home</span></span
+          ></a
+        ><a href="members.html"
+          ><span class="material-symbols-outlined">
+            group <span class="hover-info">Members</span></span
+          ></a
+        ><a href="documents.html"
+          ><span class="material-symbols-outlined">
+            feed <span class="hover-info">Documents</span></span
+          ></a
+        ><a href="timeline.html"
+          ><span class="material-symbols-outlined">
+            view_timeline <span class="hover-info">Timeline</span></span
+          ></a
+        ><a href="chat.html"
+          ><span class="material-symbols-outlined">
+            chat <span class="hover-info">Chatting</span></span
+          ></a
+        ><a href="calendar.html"
+          ><span class="material-symbols-outlined">
+            calendar_month <span class="hover-info">Calendar</span></span
+          ></a
+        ><a href="countdown.html"
+          ><span class="material-symbols-outlined">
+            hourglass_empty <span class="hover-info">Countdown(s)</span></span
+          ></a
+        ><a href="suggest.html"
+          ><span class="material-symbols-outlined">
+            assistant <span class="hover-info">Suggestions</span></span
+          ></a
+        ><a href="games.html"
+          ><span class="material-symbols-outlined">
+            stadia_controller <span class="hover-info">Games</span></span
+          ></a
+        ><a href="account.html" id="activated"
+          ><span class="material-symbols-outlined">
+            account_circle <span class="hover-info">Account</span></span
+          ></a
+        ></span
+      >
+    </nav>
+    <div class="nav-resistance" id="tp"></div>
+    <h2 style="margin-left: 12%">Sign Up</h2>
+    <center>
+      <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+      <script>
+        import { initializeApp } from "firebase/app";
+        import { getDatabase } from "firebase/database";
+        var firebaseConfig = {
+          apiKey: "AIzaSyC0xyTcV8cLK_ducPzzXJOCDXwtcuU8qOI",
+          authDomain: "jis-grade12.firebaseapp.com",
+          databaseURL:
+            "https://jis-grade12-default-rtdb.asia-southeast1.firebasedatabase.app",
+          projectId: "jis-grade12",
+          storageBucket: "jis-grade12.appspot.com",
+          messagingSenderId: "189452419298",
+          appId: "1:189452419298:web:0ac371b7484ea023865ebb",
+          measurementId: "G-349L78RWFM",
+        };
+        firebase.initializeApp(config);
+        function writeData() {
+          firebase
+            .database()
+            .ref("User")
+            .set({
+              name: document.getElementById("username").value,
+              age: document.getElementById("register-password").value,
+            });
+          I;
+          getData();
+        }
+        function getData() {
+          firebase
+            .database()
+            .ref("/")
+            .once("value", function (snapshot) {
+              snapshot.forEach(function (childSnapshot) {
+                var childKey = childSnapshot.key;
+                var childData = childSnapshot.val();
+                document.getElementById("data").innerHTML =
+                  childData["name"] + ", " + childData["age"];
+              });
+            });
+        }
+        getData();
+      </script>
 
-			<p id="data"></p>
-			<form>
-				<label for="name"
-					><span class="material-symbols-outlined"> person </span> Name</label
-				>
-				<input
-					class="name"
-					type="text"
-					name="first-name"
-					title="First Name"
-					placeholder="First Name"
-					required
-				/>
-				<input
-					class="name"
-					type="text"
-					name="last-name"
-					title="Last Name"
-					placeholder="Last Name"
-					required
-				/>
-				<br />
-				<label
-					for="username"
-					style="display: inline-flex; width: fit-content; margin-left: -11%"
-					><span class="material-symbols-outlined"> account_circle </span>
-					Username</label
-				><label
-					for="rollno"
-					style="display: inline-flex; width: fit-content; margin-left: 39%"
-					><span class="material-symbols-outlined"> school </span>School
-					ID</label
-				>
-				<input
-					type="text"
-					name="username"
-					title="Username"
-					placeholder="Username"
-					required
-					class="username"
-					id="username"
-				/><input
-					type="text"
-					name="rollno"
-					title="Roll No"
-					placeholder="Roll #"
-					value="2012"
-					required
-					class="rollno"
-				/>
+      <p id="data"></p>
+      <form>
+        <label for="name"
+          ><span class="material-symbols-outlined"> person </span> Name</label
+        >
+        <input
+          class="name"
+          type="text"
+          name="first-name"
+          title="First Name"
+          placeholder="First Name"
+          required
+        />
+        <input
+          class="name"
+          type="text"
+          name="last-name"
+          title="Last Name"
+          placeholder="Last Name"
+          required
+        />
+        <br />
+        <label
+          for="username"
+          style="display: inline-flex; width: fit-content; margin-left: -11%"
+          ><span class="material-symbols-outlined"> account_circle </span>
+          Username</label
+        ><label
+          for="rollno"
+          style="display: inline-flex; width: fit-content; margin-left: 39%"
+          ><span class="material-symbols-outlined"> school </span>School
+          ID</label
+        >
+        <input
+          type="text"
+          name="username"
+          title="Username"
+          placeholder="Username"
+          required
+          class="username"
+          id="username"
+        /><input
+          type="text"
+          name="rollno"
+          title="Roll No"
+          placeholder="Roll #"
+          value="2012"
+          required
+          class="rollno"
+        />
 
-				<label for="email"
-					><span class="material-symbols-outlined"> email </span> Email</label
-				>
-				<input
-					type="email"
-					name="email"
-					title="Email"
-					placeholder="Email"
-					id="register-email"
-					required
-				/>
-				<label for="Password"
-					><span class="material-symbols-outlined"> password </span>
-					Password</label
-				>
-				<input
-					type="password"
-					name="password"
-					title="Password"
-					placeholder="Password"
-					id="register-password"
-					required
-				/>
-				<label for="position"
-					><span class="material-symbols-outlined"> group </span>
-					Position</label
-				>
-				<input type="radio" name="position" title="Position" id="" />
-				<label for="pfp"
-					><span class="material-symbols-outlined"> image </span> Candidate
-					Picture</label
-				>
-				<input type="file" name="pfp" title="Profile Picture" id="" required />
-				<input
-					type="datetime-local"
-					name="datetime"
-					title="datetime"
-					hidden
-					id=""
-				/>
-				<button value="Sign Up" id="register-btn" onclick="writeData()">
-					Submit
-				</button>
-				<a class="form-links" href="signin.html">Already have an account?</a>
-			</form>
-		</center>
-		<div class="nav-resistance"></div>
-		<script src="../scripts/form.js"></script>
-		<footer>
-			&#169;
-			<script>
-				document.write(/\d{4}/.exec(Date())[0]);
-			</script>
-			JIS Grade 12 &#124; Made with &#10084; by Arsalan
-		</footer>
-	</body>
+        <label for="email"
+          ><span class="material-symbols-outlined"> email </span> Email</label
+        >
+        <input
+          type="email"
+          name="email"
+          title="Email"
+          placeholder="Email"
+          id="register-email"
+          required
+        />
+        <label for="Password"
+          ><span class="material-symbols-outlined"> password </span>
+          Password</label
+        >
+        <input
+          type="password"
+          name="password"
+          title="Password"
+          placeholder="Password"
+          id="register-password"
+          required
+        />
+        <label for="position"
+          ><span class="material-symbols-outlined"> group </span>
+          Position</label
+        >
+        <input type="radio" name="position" title="Position" id="" />
+        <label for="pfp"
+          ><span class="material-symbols-outlined"> image </span> Candidate
+          Picture</label
+        >
+        <input type="file" name="pfp" title="Profile Picture" id="" required />
+        <input
+          type="datetime-local"
+          name="datetime"
+          title="datetime"
+          hidden
+          id=""
+        />
+        <button value="Sign Up" id="register-btn" onclick="writeData()">
+          Submit
+        </button>
+        <a class="form-links" href="signin.html">Already have an account?</a>
+      </form>
+    </center>
+    <div class="nav-resistance"></div>
+    <script src="../scripts/form.js"></script>
+    <footer>
+      &#169;
+      <script>
+        document.write(/\d{4}/.exec(Date())[0]);
+      </script>
+      JIS Grade 12 &#124; Made with &#10084; by Arsalan
+    </footer>
+  </body>
 </html>

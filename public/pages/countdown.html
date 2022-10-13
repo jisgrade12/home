@@ -1,189 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/x-icon" href="../images/12_l.png" />
-		<link rel="stylesheet" href="../stylesheets/style.css" />
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-		/>
-		<title>Grade 12 | Countdowns</title>
-		<script type="text/javascript">
-			window.$crisp = [];
-			window.CRISP_WEBSITE_ID = "dabd32ac-0dd3-4b77-9001-dcbe68217c70";
-			(function () {
-				d = document;
-				s = d.createElement("script");
-				s.src = "https://client.crisp.chat/l.js";
-				s.async = 1;
-				d.getElementsByTagName("head")[0].appendChild(s);
-			})();
-		</script>
-	</head>
-	<body>
-		<nav>
-			<a href="../index.html"
-				><img src="../images/12_s.png" alt="Grade 12 Logo"
-			/></a>
-			<h1 id="nav-name">Countdowns</h1>
-			<span class="pages"
-				><a href="../index.html"
-					><span class="material-symbols-outlined">
-						home <span class="hover-info">Home</span></span
-					></a
-				><a href="members.html"
-					><span class="material-symbols-outlined">
-						group <span class="hover-info">Members</span></span
-					></a
-				><a href="documents.html"
-					><span class="material-symbols-outlined">
-						feed <span class="hover-info">Documents</span></span
-					></a
-				><a href="timeline.html"
-					><span class="material-symbols-outlined">
-						view_timeline <span class="hover-info">Timeline</span></span
-					></a
-				><a href="chat.html"
-					><span class="material-symbols-outlined">
-						chat <span class="hover-info">Chatting</span></span
-					></a
-				><a href="calendar.html"
-					><span class="material-symbols-outlined">
-						calendar_month <span class="hover-info">Calendar</span></span
-					></a
-				><a href="#tp" id="activated"
-					><span class="material-symbols-outlined">
-						hourglass_empty <span class="hover-info">Countdown(s)</span></span
-					></a
-				><a href="suggest.html"
-					><span class="material-symbols-outlined">
-						assistant <span class="hover-info">Suggestions</span></span
-					></a
-				><a href="games.html"
-					><span class="material-symbols-outlined">
-						stadia_controller <span class="hover-info">Games</span></span
-					></a
-				><a href="signup.html"
-					><span class="material-symbols-outlined">
-						account_circle <span class="hover-info">Account</span></span
-					></a
-				></span
-			>
-		</nav>
-		<div class="nav-resistance" id="tp"></div>
-		<h2>Dates (Events)</h2>
-		<div class="home-counters">
-			<div class="counters">
-				<div class="name">
-					<span class="material-symbols-outlined">calendar_month</span
-					>1<sup>st</sup>&nbsp;Term Exams
-				</div>
-				<div class="counter" id="counter1"></div>
-				<div class="role">20/11/2022</div>
-			</div>
-			<div class="counters">
-				<div class="name">
-					<span class="material-symbols-outlined">calendar_month</span
-					>1<sup>st</sup>&nbsp;Term Break
-				</div>
-				<div class="counter" id="counter2"></div>
-				<div class="role">27/11/2022</div>
-			</div>
-			<div class="counters">
-				<div class="name">
-					<span class="material-symbols-outlined">calendar_month</span>Second
-					Term begins
-				</div>
-				<div class="counter" id="counter3"></div>
-				<div class="role">04/12/2022</div>
-			</div>
-			<div class="counters">
-				<div class="name">
-					<span class="material-symbols-outlined">calendar_month</span>National
-					founding day
-				</div>
-				<div class="counter" id="counter4"></div>
-				<div class="role">22/02/2023</div>
-			</div>
-			<div class="counters">
-				<div class="name">
-					<span class="material-symbols-outlined">calendar_month</span>Second
-					Term Exams
-				</div>
-				<div class="counter" id="counter5"></div>
-				<div class="role">26/02/2023</div>
-			</div>
-			<div class="counters">
-				<div class="name">
-					<span class="material-symbols-outlined">calendar_month</span>Second
-					Term break
-				</div>
-				<div class="counter" id="counter6"></div>
-				<div class="role">05/03/2023</div>
-			</div>
-			<div class="counters">
-				<div class="name">
-					<span class="material-symbols-outlined">calendar_month</span>Third
-					Term begins
-				</div>
-				<div class="counter" id="counter7"></div>
-				<div class="role">12/03/2023</div>
-			</div>
-			<div class="counters">
-				<div class="name">
-					<span class="material-symbols-outlined">calendar_month</span
-					>Eid-ul-fitr holidays
-				</div>
-				<div class="counter" id="counter8"></div>
-				<div class="role">16/04/2023</div>
-			</div>
-			<div class="counters">
-				<div class="name">
-					<span class="material-symbols-outlined">calendar_month</span>School
-					Starts (Again)
-				</div>
-				<div class="counter" id="counter9"></div>
-				<div class="role">26/04/2023</div>
-			</div>
-			<div class="counters">
-				<div class="name">
-					<span class="material-symbols-outlined">calendar_month</span
-					>Graduation (Predicted)
-				</div>
-				<div class="counter" id="counter10"></div>
-				<div class="role">15/06/2023 <i>[Predicted]</i></div>
-			</div>
-			<div class="counters">
-				<div class="name">
-					<span class="material-symbols-outlined">calendar_month</span
-					>3<sup>rd</sup>&nbsp;Term Exams
-				</div>
-				<div class="counter" id="counter11"></div>
-				<div class="role">18/06/2023</div>
-			</div>
-			<div class="counters">
-				<div class="name">
-					<span class="material-symbols-outlined">calendar_month</span>School
-					Ends
-				</div>
-				<div class="counter" id="counter12"></div>
-				<div class="role">22/06/2023</div>
-			</div>
-		</div>
-		<h6>
-			<strong>Note:</strong> This information is subject to change without
-			further notice.
-		</h6>
-		<footer>
-			&#169;
-			<script>
-				document.write(/\d{4}/.exec(Date())[0]);
-			</script>
-			JIS Grade 12 &#124; Made with &#10084; by Arsalan
-		</footer>
-		<script src="../scripts/countdown.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JIS | Grade 12" />
+    <meta
+      name="keywords"
+      content="Grade 12, 12, Class of 2023, Alhussan, JIS, Jubail, School, Jubail International School, time, countdown"
+    />
+    <meta name="author" content="Muhammad Arsalan" />
+    <meta property="og:title" content="JIS Grade 12 - Countdown" />
+    <meta property="og:url" content="https://jis-grade12.web.app/" />
+    <meta
+      property="og:image"
+      content="https://jis-grade12.web.app/images/Grade12_count.png"
+    />
+    <meta
+      property="og:description"
+      content="This is the countdown page for JIS Grade12 - All the list of events planned before we leave."
+    />
+    <meta name="msapplication-TileColor" content="#14adaa" />
+    <meta name="theme-color" content="#14adaa" />
+    <link rel="icon" type="image/x-icon" href="../images/12_l.png" />
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>Grade 12 | Countdowns</title>
+    <script type="text/javascript">
+      window.$crisp = [];
+      window.CRISP_WEBSITE_ID = "dabd32ac-0dd3-4b77-9001-dcbe68217c70";
+      (function () {
+        d = document;
+        s = d.createElement("script");
+        s.src = "https://client.crisp.chat/l.js";
+        s.async = 1;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script>
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html"
+        ><img src="../images/12_s.png" alt="Grade 12 Logo"
+      /></a>
+      <h1 id="nav-name">Countdowns</h1>
+      <span class="pages"
+        ><a href="../index.html"
+          ><span class="material-symbols-outlined">
+            home <span class="hover-info">Home</span></span
+          ></a
+        ><a href="members.html"
+          ><span class="material-symbols-outlined">
+            group <span class="hover-info">Members</span></span
+          ></a
+        ><a href="documents.html"
+          ><span class="material-symbols-outlined">
+            feed <span class="hover-info">Documents</span></span
+          ></a
+        ><a href="timeline.html"
+          ><span class="material-symbols-outlined">
+            view_timeline <span class="hover-info">Timeline</span></span
+          ></a
+        ><a href="chat.html"
+          ><span class="material-symbols-outlined">
+            chat <span class="hover-info">Chatting</span></span
+          ></a
+        ><a href="calendar.html"
+          ><span class="material-symbols-outlined">
+            calendar_month <span class="hover-info">Calendar</span></span
+          ></a
+        ><a href="#tp" id="activated"
+          ><span class="material-symbols-outlined">
+            hourglass_empty <span class="hover-info">Countdown(s)</span></span
+          ></a
+        ><a href="suggest.html"
+          ><span class="material-symbols-outlined">
+            assistant <span class="hover-info">Suggestions</span></span
+          ></a
+        ><a href="games.html"
+          ><span class="material-symbols-outlined">
+            stadia_controller <span class="hover-info">Games</span></span
+          ></a
+        ><a href="signup.html"
+          ><span class="material-symbols-outlined">
+            account_circle <span class="hover-info">Account</span></span
+          ></a
+        ></span
+      >
+    </nav>
+    <div class="nav-resistance" id="tp"></div>
+    <h2>Dates (Events)</h2>
+    <div class="home-counters">
+      <div class="counters">
+        <div class="name">
+          <span class="material-symbols-outlined">calendar_month</span
+          >1<sup>st</sup>&nbsp;Term Exams
+        </div>
+        <div class="counter" id="counter1"></div>
+        <div class="role">20/11/2022</div>
+      </div>
+      <div class="counters">
+        <div class="name">
+          <span class="material-symbols-outlined">calendar_month</span
+          >1<sup>st</sup>&nbsp;Term Break
+        </div>
+        <div class="counter" id="counter2"></div>
+        <div class="role">27/11/2022</div>
+      </div>
+      <div class="counters">
+        <div class="name">
+          <span class="material-symbols-outlined">calendar_month</span>Second
+          Term begins
+        </div>
+        <div class="counter" id="counter3"></div>
+        <div class="role">04/12/2022</div>
+      </div>
+      <div class="counters">
+        <div class="name">
+          <span class="material-symbols-outlined">calendar_month</span>National
+          founding day
+        </div>
+        <div class="counter" id="counter4"></div>
+        <div class="role">22/02/2023</div>
+      </div>
+      <div class="counters">
+        <div class="name">
+          <span class="material-symbols-outlined">calendar_month</span>Second
+          Term Exams
+        </div>
+        <div class="counter" id="counter5"></div>
+        <div class="role">26/02/2023</div>
+      </div>
+      <div class="counters">
+        <div class="name">
+          <span class="material-symbols-outlined">calendar_month</span>Second
+          Term break
+        </div>
+        <div class="counter" id="counter6"></div>
+        <div class="role">05/03/2023</div>
+      </div>
+      <div class="counters">
+        <div class="name">
+          <span class="material-symbols-outlined">calendar_month</span>Third
+          Term begins
+        </div>
+        <div class="counter" id="counter7"></div>
+        <div class="role">12/03/2023</div>
+      </div>
+      <div class="counters">
+        <div class="name">
+          <span class="material-symbols-outlined">calendar_month</span
+          >Eid-ul-fitr holidays
+        </div>
+        <div class="counter" id="counter8"></div>
+        <div class="role">16/04/2023</div>
+      </div>
+      <div class="counters">
+        <div class="name">
+          <span class="material-symbols-outlined">calendar_month</span>School
+          Starts (Again)
+        </div>
+        <div class="counter" id="counter9"></div>
+        <div class="role">26/04/2023</div>
+      </div>
+      <div class="counters">
+        <div class="name">
+          <span class="material-symbols-outlined">calendar_month</span
+          >Graduation (Predicted)
+        </div>
+        <div class="counter" id="counter10"></div>
+        <div class="role">15/06/2023 <i>[Predicted]</i></div>
+      </div>
+      <div class="counters">
+        <div class="name">
+          <span class="material-symbols-outlined">calendar_month</span
+          >3<sup>rd</sup>&nbsp;Term Exams
+        </div>
+        <div class="counter" id="counter11"></div>
+        <div class="role">18/06/2023</div>
+      </div>
+      <div class="counters">
+        <div class="name">
+          <span class="material-symbols-outlined">calendar_month</span>School
+          Ends
+        </div>
+        <div class="counter" id="counter12"></div>
+        <div class="role">22/06/2023</div>
+      </div>
+    </div>
+    <h6>
+      <strong>Note:</strong> This information is subject to change without
+      further notice.
+    </h6>
+    <footer>
+      &#169;
+      <script>
+        document.write(/\d{4}/.exec(Date())[0]);
+      </script>
+      JIS Grade 12 &#124; Made with &#10084; by Arsalan
+    </footer>
+    <script src="../scripts/countdown.js"></script>
+  </body>
 </html>
