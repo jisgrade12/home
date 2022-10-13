@@ -32,13 +32,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css"
-    />
-
     <title>Grade 12 | Sign In</title>
     <script type="text/javascript">
       window.$crisp = [];
@@ -51,8 +44,71 @@
         d.getElementsByTagName("head")[0].appendChild(s);
       })();
     </script>
+    <script>
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+      import { analytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+      const firebaseConfig = {
+        apiKey: "AIzaSyC0xyTcV8cLK_ducPzzXJOCDXwtcuU8qOI",
+        authDomain: "jis-grade12.firebaseapp.com",
+        databaseURL:
+          "https://jis-grade12-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "jis-grade12",
+        storageBucket: "jis-grade12.appspot.com",
+        messagingSenderId: "189452419298",
+        appId: "1:189452419298:web:0ac371b7484ea023865ebb",
+      };
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css"
+    />
   </head>
   <body>
+    <script>
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      ui.start("#firebaseui-auth-container", {
+        signInOptions: [
+          {
+            provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+            scopes: ["https://www.googleapis.com/auth/contacts.readonly"],
+            customParameters: {
+              prompt: "select_account",
+            },
+          },
+          {
+            provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            signInMethod:
+              firebase.auth.EmailAuthProvider.EMAIL_LINK_SIGN_IN_METHOD,
+          },
+        ],
+        // Other config options...
+      });
+      var uiConfig = {
+        callbacks: {
+          signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+            return true;
+          },
+          uiShown: function () {
+            document.getElementById("loader").style.display = "none";
+          },
+        },
+        signInFlow: "popup",
+        signInSuccessUrl: "account.html",
+        signInOptions: [
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          firebase.auth.EmailAuthProvider.PROVIDER_ID,
+        ],
+        tosUrl: "../tos.html",
+        privacyPolicyUrl: "../privacy_policy.html",
+      };
+      if (ui.isPendingRedirect()) {
+        ui.start("#firebaseui-auth-container", uiConfig);
+      }
+    </script>
     <nav>
       <a href="../index.html"
         ><img src="../images/12_s.png" alt="Grade 12 Logo"
@@ -107,28 +163,6 @@
     <center>
       <form>
         <div id="my-signin2"></div>
-        <script>
-          function onSuccess(googleUser) {
-            console.log(
-              "Logged in as: " + googleUser.getBasicProfile().getName()
-            );
-          }
-          function onFailure(error) {
-            console.log(error);
-          }
-          function renderButton() {
-            gapi.signin2.render("my-signin2", {
-              scope: "profile email",
-              width: 240,
-              height: 50,
-              longtitle: true,
-              theme: "dark",
-              onsuccess: onSuccess,
-              onfailure: onFailure,
-            });
-          }
-        </script>
-
         <script
           src="https://apis.google.com/js/platform.js?onload=renderButton"
           async
@@ -159,10 +193,12 @@
           required
         />
         <input type="submit" value="Sign In" id="login-btn" />
-        <a class="form-links" href="#tp">Forgor password?</a>
+        <a class="form-links" href="#">Forgor password?</a>
         <a class="form-links" href="signup.html">New here? Register Now!</a>
       </form>
     </center>
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div>
     <div class="nav-resistance"></div>
     <script src="../scripts/form.js"></script>
     <footer>
