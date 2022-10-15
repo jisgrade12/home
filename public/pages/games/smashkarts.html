@@ -48,14 +48,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-messaging.js"></script>
     <script>
-      MsgElem = document.getElementById("msg");
-      TokenElem = document.getElementById("token");
-      NotisElem = document.getElementById("notis");
-      ErrElem = document.getElementById("err");
-      // Initialize Firebase
-      // TODO: Replace with your project's customized code snippet
-      var config = {
-        messagingSenderId: "189452419298",
+      messagingSenderId: "189452419298",
         apiKey: "AIzaSyC0xyTcV8cLK_ducPzzXJOCDXwtcuU8qOI",
         projectId: "jis-grade12",
         appId: "1:189452419298:web:0ac371b7484ea023865ebb",
@@ -66,17 +59,13 @@
       messaging
         .requestPermission()
         .then(function () {
-          MsgElem.innerHTML = "Notification permission granted.";
           console.log("Notification permission granted.");
-
-          // get the token in the form of promise
           return messaging.getToken();
         })
         .then(function (token) {
-          TokenElem.innerHTML = "token is : " + token;
+          console.log("token is : " + token);
         })
         .catch(function (err) {
-          ErrElem.innerHTML = ErrElem.innerHTML + "; " + err;
           console.log("Unable to get permission to notify.", err);
         });
     </script>
