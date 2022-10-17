@@ -44,22 +44,6 @@
         d.getElementsByTagName("head")[0].appendChild(s);
       })();
     </script>
-    <script>
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-      import { analytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
-      const firebaseConfig = {
-        apiKey: "AIzaSyC0xyTcV8cLK_ducPzzXJOCDXwtcuU8qOI",
-        authDomain: "jis-grade12.firebaseapp.com",
-        databaseURL:
-          "https://jis-grade12-default-rtdb.asia-southeast1.firebasedatabase.app",
-        projectId: "jis-grade12",
-        storageBucket: "jis-grade12.appspot.com",
-        messagingSenderId: "189452419298",
-        appId: "1:189452419298:web:0ac371b7484ea023865ebb",
-      };
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-    </script>
     <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
     <link
       type="text/css"
@@ -71,6 +55,22 @@
     <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-messaging.js"></script>
     <script>
+      import { initializeApp } from "firebase/app";
+      import { getAnalytics } from "firebase/analytics";
+      const firebaseConfig = {
+        apiKey: "AIzaSyC0xyTcV8cLK_ducPzzXJOCDXwtcuU8qOI",
+        authDomain: "jis-grade12.firebaseapp.com",
+        databaseURL:
+          "https://jis-grade12-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "jis-grade12",
+        storageBucket: "jis-grade12.appspot.com",
+        messagingSenderId: "189452419298",
+        appId: "1:189452419298:web:0ac371b7484ea023865ebb",
+        measurementId: "G-349L78RWFM",
+      };
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
       var config = {
         messagingSenderId: "189452419298",
         apiKey: "AIzaSyC0xyTcV8cLK_ducPzzXJOCDXwtcuU8qOI",

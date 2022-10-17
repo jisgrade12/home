@@ -72,6 +72,23 @@
         .catch(function (err) {
           console.log("Unable to get permission to notify.", err);
         });
+
+      import { initializeApp } from "firebase/app";
+      import { getAnalytics } from "firebase/analytics";
+      const firebaseConfig = {
+        apiKey: "AIzaSyC0xyTcV8cLK_ducPzzXJOCDXwtcuU8qOI",
+        authDomain: "jis-grade12.firebaseapp.com",
+        databaseURL:
+          "https://jis-grade12-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "jis-grade12",
+        storageBucket: "jis-grade12.appspot.com",
+        messagingSenderId: "189452419298",
+        appId: "1:189452419298:web:0ac371b7484ea023865ebb",
+        measurementId: "G-349L78RWFM",
+      };
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
     </script>
 
     <nav>
