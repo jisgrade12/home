@@ -31,7 +31,7 @@
     <title>JIS | Mental Health Awareness</title>
     <style>
       :root {
-        --main-color: #008aff;
+        --main-color: #008aff !important;
         --text-color: #d7d7d7;
         --text-inverse: #252525;
       }
@@ -39,7 +39,7 @@
       .home-404 {
         width: 100%;
         height: 100vh;
-        background: #008aff;
+        background: #008aff !important;
         background: linear-gradient(
           90deg,
           rgb(29, 29, 29) 20%,
@@ -52,7 +52,11 @@
         animation: wallpaper 50s infinite linear;
       }
       nav > .pages #activated {
-        color: #008aff;
+        color: #008aff !important;
+      }
+      nav > .pages .material-symbols-outlined:active {
+        background-color: #008aff56 !important;
+        transition: all 5ms ease-in-out;
       }
     </style>
   </head>
@@ -66,6 +70,14 @@
         ><a href="#tp"
           ><span class="material-symbols-outlined" id="activated">
             home <span class="hover-info">Home</span></span
+          ></a
+        ><a href="mentalhealth/art.html"
+          ><span class="material-symbols-outlined">
+            draw <span class="hover-info">Art</span></span
+          ></a
+        ><a href="mentalhealth/credits.html"
+          ><span class="material-symbols-outlined">
+            info <span class="hover-info">Credits</span></span
           ></a
         ></span
       >
@@ -96,22 +108,111 @@
         ></rect>
       </svg>
       <div class="nav-resistance" id="tp"></div>
-      <a href="pages/games/snake.html" style="cursor: default"
-        ><div class="home-title2">Mental Health Awareness</div></a
-      >
+      <a href="#tp"><div class="home-title2">Mental Health Awareness</div></a>
       <div class="button-holder">
-        <a href="pages/members.html" class="home-blink"
+        <a href="mentalhealth/art.html" class="home-blink"
           ><div class="home-but">
-            <span class="material-symbols-outlined">groups</span> See the Team!
+            <span class="material-symbols-outlined">draw</span> See Creativity
           </div></a
         >
-        <a href="pages/signup.html" class="home-blink"
+        <a href="#faq" class="home-blink"
           ><div class="home-but">
-            <span class="material-symbols-outlined">Start</span> Join Now!
+            <span class="material-symbols-outlined">question_mark</span>
+            Related FAQs
           </div></a
         >
       </div>
     </div>
+    <h2>What is Mental Health Awareness?</h2>
+    <h3>
+      Being aware of your overall health is important so that you can detect any
+      symptoms and seek professional help when necessary. While everyone is
+      familiar familiar with the symptoms and treatment options for common
+      illnesses that affect their loved ones, like the flu, migraines, or and
+      (most recently) COVID-19, many people are unsure how to look after their
+      mental health.<br />
+      Raising mental health awareness can help you to understand your symptoms,
+      find professional treatment, and, perhaps most importantly, break the
+      mental health stigma that leaves so many people suffering in secret.
+    </h3>
+    <h2 id="faq">FAQs</h2>
+    <h3>
+      <details>
+        <summary>What is mental health?</summary>
+        <p>
+          We all have mental health which is made up of our beliefs, thoughts,
+          feelings and behaviours.
+        </p>
+      </details>
+      <details>
+        <summary>What do I do if the support doesn’t help?</summary>
+        <p>
+          It can be difficult to find the things that will help you, as
+          different things help different people. It’s important to be open to a
+          range of approaches and to be committed to finding the right help and
+          to continue to be hopeful, even when some things don’t work out.
+        </p>
+      </details>
+      <details>
+        <summary>Can you prevent mental health problems?</summary>
+        <p>
+          We can all suffer from mental health challenges, but developing our
+          wellbeing, resilience, and seeking help early can help prevent
+          challenges becoming serious.
+        </p>
+      </details>
+      <details>
+        <summary>Are there cures for mental health problems?</summary>
+        <p>
+          It is often more realistic and helpful to find out what helps with the
+          issues you face. Talking, counselling, medication, friendships,
+          exercise, good sleep and nutrition, and meaningful occupation can all
+          help.
+        </p>
+      </details>
+      <details>
+        <summary>What causes mental health problems?</summary>
+        <p>
+          Challenges or problems with your mental health can arise from
+          psychological, biological, and social, issues, as well as life events.
+        </p>
+      </details>
+      <details>
+        <summary>What do I do if I’m worried about my mental health?</summary>
+        <p>
+          The most important thing is to talk to someone you trust. This might
+          be a friend, colleague, family member, or GP. In addition to talking
+          to someone, it may be useful to find out more information about what
+          you are experiencing. These things may help to get some perspective on
+          what you are experiencing, and be the start of getting help.
+        </p>
+      </details>
+      <details>
+        <summary>How do I know if I’m unwell?</summary>
+        <p>
+          If your beliefs , thoughts , feelings or behaviours have a significant
+          impact on your ability to function in what might be considered a
+          normal or ordinary way, it would be important to seek help.
+        </p>
+      </details>
+      <details>
+        <summary>
+          What should I do if I’m worried about a friend or relative?
+        </summary>
+        <p>
+          This may depend on your relationship with them. Gently encouraging
+          someone to seek appropriate support would be helpful to start with.
+        </p>
+      </details>
+      <details>
+        <summary>How do I deal with someone telling me what to do?</summary>
+        <p>
+          Some people may advise you on good evidence of what works with the
+          best of intentions, but it’s important to find out what works best for
+          you.
+        </p>
+      </details>
+    </h3>
     <footer>
       &#169;
       <script>
