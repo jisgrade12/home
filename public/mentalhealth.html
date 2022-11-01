@@ -57,6 +57,15 @@
         justify-content: center;
         text-align: center;
       }
+      nav img {
+        margin-top: 0.5vw;
+        width: 5vw;
+        filter: contrast(0) grayscale(0);
+        transition: all 0.5s ease-in-out;
+      }
+      nav:hover img {
+        filter: contrast(1) grayscale(0);
+      }
       nav > .pages {
         margin: 0;
       }
@@ -75,7 +84,7 @@
   </head>
   <body>
     <nav>
-      <a href="#tp">[img]</a>
+      <a href="#tp"><img src="images/mental.png" alt="" /></a>
       <span class="pages"
         ><a href="#tp"
           ><span class="material-symbols-outlined" id="activated">

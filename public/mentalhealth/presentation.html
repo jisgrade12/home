@@ -64,6 +64,13 @@
         filter: contrast(1);
         animation: wallpaper 50s infinite linear;
       }
+      nav img {
+        filter: contrast(0) grayscale(1);
+        transition: all 0.5s ease-in-out;
+      }
+      nav:hover img {
+        filter: contrast(1) grayscale(0);
+      }
       nav > .pages #activated {
         color: #008d2c !important;
       }
