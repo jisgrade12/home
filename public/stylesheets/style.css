@@ -287,7 +287,7 @@ nav:hover #nav-name::after {
     background-position: 300%;
   }
 }
-input,
+input:not(.timeline),
 select {
   justify-content: center;
   font-size: 2.3vw;
@@ -306,12 +306,12 @@ input.name {
   width: 45%;
 }
 button.msg:focus,
-input:focus,
+input:not(.timeline):focus,
 select:focus {
   color: var(--main-color);
 }
 button.msg:hover,
-input:hover,
+input:not(.timeline):hover,
 select:hover {
   color: var(--text-color);
   filter: drop-shadow(var(--text-inverse) 4px 4px 4px);
@@ -1753,6 +1753,28 @@ h5 {
   font-weight: lighter;
   font-size: 3vw;
   margin: 0 3vw;
+}
+.audio-platform {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 0 3vw;
+}
+/*.audio-platform audio {
+  width: 70%;
+  margin: 0 0;
+}*/
+.audio-platform div:nth-child(n) {
+  display: flex;
+  align-items: center;
+}
+.audio-platform div:nth-child(2n) {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 0.5vw 0;
+  font-family: "koulen", sans-serif;
+  font-size: 4vw;
 }
 @media (max-width: 850px) {
   nav {
