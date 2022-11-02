@@ -1831,6 +1831,51 @@ h5 {
   color: var(--text-color);
   background-color: var(--main-color);
 }
+.mental-health-buttonsheet {
+  display: grid;
+  margin: 0 3vw;
+  grid-template-columns: 20% 20% 20% 20%;
+  column-gap: 6.6667%;
+  row-gap: 10%;
+}
+.mental-health-buttonsheet > a > div {
+  width: 100%;
+  cursor: pointer;
+}
+.mental-health-buttonsheet img {
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 0;
+  border-radius: 1vw;
+  border: var(--text-color) 4px solid;
+}
+.mental-health-buttonsheet > a > div > div:nth-child(2) {
+  font-family: "koulen", sans-serif;
+  font-size: 3vw;
+  margin-top: -41%;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  transition: all 0.5s ease-in-out;
+}
+.mental-health-buttonsheet > a > div:hover > div:nth-child(2) {
+  margin-top: -45%;
+  font-size: 1.7vw;
+}
+.mental-health-buttonsheet > a > div > div:nth-child(3) {
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  filter: opacity(0);
+  transition: all 0.5s ease-in-out;
+}
+.mental-health-buttonsheet > a > div:hover > div:nth-child(3) {
+  filter: opacity(1);
+}
+.divided-ghada {
+  display: grid;
+  grid-template-columns: 100% 0%;
+  margin: 0 3vw;
+  font-size: 2vw;
+}
 @media (max-width: 850px) {
   nav {
     height: 7vh;
