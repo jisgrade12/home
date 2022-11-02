@@ -1766,6 +1766,7 @@ h5 {
 .audio-platform div:nth-child(n) {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .audio-platform div:nth-child(2n) {
   display: flex;

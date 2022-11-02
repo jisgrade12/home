@@ -2,8 +2,8 @@
   --player-button-width: 3em;
   --sound-button-width: 2em;
   --space: 0.5em;
-  width: 15rem;
-  height: 15rem;
+  width: 80%;
+  height: auto;
 }
 .icon-container {
   width: 100%;
