@@ -409,9 +409,11 @@ label:hover .material-symbols-outlined {
 }
 .home-title2 {
   font-size: 9vw;
+  margin-top: -3vw;
 }
 .home-title2:after {
   background-color: #008d2c9d;
+  margin-top: -2vw;
 }
 .button-holder {
   position: absolute;
@@ -1872,9 +1874,71 @@ h5 {
 }
 .divided-ghada {
   display: grid;
-  grid-template-columns: 100% 0%;
+  grid-template-columns: 50% 50%;
   margin: 0 3vw;
-  font-size: 2vw;
+  font-size: 3vw;
+}
+.divided-ghada div:nth-child(1) {
+  font-size: 1vw;
+  margin-right: 3vw;
+  text-align: justify;
+}
+.divided-ghada div:nth-child(n + 2) {
+  margin-top: 3vw;
+}
+.divided-ghada div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.divided-ghada div:nth-child(2) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2vw;
+  box-sizing: border-box;
+  border: var(--main-color) 3px solid;
+}
+.divided-ghada div:nth-child(3) {
+  font-size: 3.7vw;
+  display: flex;
+  align-items: center;
+  font-family: "koulen", sans-serif;
+  transition: all 0.5s ease-in-out;
+}
+.divided-ghada div:nth-child(3):hover {
+  margin-left: 2vw;
+}
+.divided-ghada div:nth-child(3)::before {
+  content: "\276F";
+  position: absolute;
+  filter: opacity(0);
+  transition: all 0.5s ease-in-out;
+}
+.divided-ghada div:nth-child(3):hover::before {
+  margin-left: -2vw;
+  filter: opacity(1);
+}
+.divided-ghada div:nth-child(4) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vw;
+  column-gap: 30vw;
+}
+.divided-ghada div:nth-child(4) a {
+  padding: 0.2vw;
+  transition: all 0.5s ease-in-out;
+}
+.divided-ghada div:nth-child(4) a:hover {
+  color: var(--main-color);
+  background-color: #35353556;
+  border-radius: 0.5vw;
+  transition: all 0.1s ease-in-out;
+}
+.divided-ghada div:nth-child(4) a:active {
+  color: var(--text-color);
+  background-color: var(--main-color);
 }
 @media (max-width: 850px) {
   nav {
