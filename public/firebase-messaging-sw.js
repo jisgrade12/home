@@ -29,7 +29,7 @@ messaging.setBackgroundMessageHandler(function (payload) {
   const notificationTitle = "Background Message Title";
   const notificationOptions = {
     body: "Background Message body.",
-    icon: "https://jis-grade12.web.app/images/12_l.png",
+    icon: "https://jis-grade12.web.app/images/12_l.webp",
   };
 
   return self.registration.showNotification(

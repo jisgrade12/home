@@ -1436,7 +1436,7 @@ a:hover > h2 {
   color: var(--main-color);
 }
 .document-holder > li:nth-child(1) > div {
-  background-image: url(../images/chemistry_course.jpg);
+  background-image: url(../images/chemistry_course.webp);
 }
 .document-holder > li:nth-child(2) > div {
   background-image: url(https://images-na.ssl-images-amazon.com/images/I/511YRV8OLdL.jpg);
@@ -1451,7 +1451,7 @@ a:hover > h2 {
   background-image: url(https://images-na.ssl-images-amazon.com/images/I/41qowZG3hJL._SX380_BO1,204,203,200_.jpg);
 }
 .document-holder > li:nth-child(6) > div {
-  background-image: url(../images/physicswork.jpg);
+  background-image: url(../images/physicswork.webp);
 }
 .document-holder > li:nth-child(7) > div {
   background-image: url(https://assets.cambridge.org/97811084/07267/cover/9781108407267.jpg);
@@ -1472,13 +1472,13 @@ a:hover > h2 {
   background-image: url(https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/1084/9781108457675.jpg);
 }
 .document-holder > li:nth-child(13) > div {
-  background-image: url(../images/english_course.jpg);
+  background-image: url(../images/english_course.webp);
 }
 .document-holder > li:nth-child(14) > div {
-  background-image: url(../images/businesscourse.jpg);
+  background-image: url(../images/businesscourse.webp);
 }
 .document-holder > li:nth-child(15) > div {
-  background-image: url(../images/biology_course.jpg);
+  background-image: url(../images/biology_course.webp);
 }
 .document-holder > li:nth-child(16) > div {
   background-image: url(https://images-na.ssl-images-amazon.com/images/I/417CKQhKBTL._SX512_BO1,204,203,200_.jpg);
@@ -1496,10 +1496,10 @@ a:hover > h2 {
   background-image: url(https://cdn.shopify.com/s/files/1/0606/3277/products/9781108716291.jpg?v=1580120077);
 }
 .document-holder > li:nth-child(21) > div {
-  background-image: url(../images/itcourse.jpg);
+  background-image: url(../images/itcourse.webp);
 }
 .document-holder > li:nth-child(22) > div {
-  background-image: url(../images/itwork.jpg);
+  background-image: url(../images/itwork.webp);
 }
 .document-holder > li:nth-child(23) > div {
   background-image: url(https://m.media-amazon.com/images/I/4180Ur2STKL._AC_SY1000_.jpg);

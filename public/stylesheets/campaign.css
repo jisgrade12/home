@@ -189,16 +189,16 @@ nav:hover #nav-name::after {
 	height: 100vh;
 	color: var(--text-color);
 	background-color: var(--text-inverse);
-	background-image: url(../images/black.png);
+	background-image: url(../images/black.webp);
 	animation: wallpaper-bg 20s linear infinite alternate;
 	background-size: cover;
 }
 @keyframes wallpaper-bg {
 	from {
-		background-image: url(../images/black.png);
+		background-image: url(../images/black.webp);
 	}
 	to {
-		background-image: url(../images/bg-green.png);
+		background-image: url(../images/bg-green.webp);
 	}
 }
 .home-1 p {
@@ -1368,7 +1368,7 @@ a:hover > h2 {
 }
 .nigga-info:nth-child(1),
 .nigga-info:nth-child(4) {
-	background-image: url(../images/bg-green.png);
+	background-image: url(../images/bg-green.webp);
 	background-size: cover;
 	background-color: var(--text-color);
 	color: var(--text-color);
@@ -1379,7 +1379,7 @@ a:hover > h2 {
 }
 .nigga-info:nth-child(1):hover,
 .nigga-info:nth-child(4):hover {
-	background-image: url(../images/black.png);
+	background-image: url(../images/black.webp);
 	background-color: var(--text-inverse);
 	color: var(--text-color);
 	border: var(--text-color) 0.5vw solid;
@@ -1412,7 +1412,7 @@ a:hover > h2 {
 }
 .nigga-info:nth-child(2),
 .nigga-info:nth-child(3) {
-	background-image: url(../images/black.png);
+	background-image: url(../images/black.webp);
 	background-size: cover;
 	color: var(--text-color);
 	box-sizing: border-box;
@@ -1421,7 +1421,7 @@ a:hover > h2 {
 }
 .nigga-info:nth-child(2):hover,
 .nigga-info:nth-child(3):hover {
-	background-image: url(../images/bg-green.png);
+	background-image: url(../images/bg-green.webp);
 	border: none;
 	border-radius: 3vw 0;
 }
@@ -1474,7 +1474,7 @@ li:nth-child(even) {
 	height: 100vh;
 }
 .nigger {
-	background-image: url(../images/bg-green.png);
+	background-image: url(../images/bg-green.webp);
 	display: flex;
 	flex-direction: column;
 	height: calc(100vh - 3vw);
