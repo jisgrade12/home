@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JIS | Grade 12" />
+    <meta
+      name="keywords"
+      content="Grade 12, 12, Class of 2023, Alhussan, JIS, Jubail, School, Jubail International School, donate, donation"
+    />
+    <meta name="author" content="Muhammad Arsalan" />
+    <meta property="og:title" content="JIS Grade 12 - Donate" />
+    <meta property="og:url" content="https://jis-grade12.web.app/" />
+    <meta
+      property="og:image"
+      content="https://jis-grade12.web.app/images/Grade12_donate.webp"
+    />
+    <meta
+      property="og:description"
+      content="This is the donation page for JIS Grade12 - Please donate us to make Grade 12 a better place for everyone! :-D"
+    />
+    <meta name="msapplication-TileColor" content="#14adaa" />
+    <meta name="theme-color" content="#14adaa" />
+    <link rel="icon" type="image/x-icon" href="../images/12_l.webp" />
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>Grade 12 | Donate</title>
+  </head>
+  <body>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-messaging.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
+    <script>
+      var config = {
+        messagingSenderId: "189452419298",
+        apiKey: "AIzaSyC0xyTcV8cLK_ducPzzXJOCDXwtcuU8qOI",
+        projectId: "jis-grade12",
+        appId: "1:189452419298:web:0ac371b7484ea023865ebb",
+      };
+      firebase.initializeApp(config);
+
+      const messaging = firebase.messaging();
+      messaging
+        .requestPermission()
+        .then(function () {
+          console.log("Notification permission granted.");
+          return messaging.getToken();
+        })
+        .then(function (token) {
+          console.log("token is : " + token);
+        })
+        .catch(function (err) {
+          console.log("Unable to get permission to notify.", err);
+        });
+    </script>
+
+    <nav>
+      <a href="../index.html"
+        ><img src="../images/12_s.webp" alt="Grade 12 Logo"
+      /></a>
+      <h1 id="nav-name">Donate</h1>
+      <span class="pages"
+        ><a href="../index.html"
+          ><span class="material-symbols-outlined">
+            home <span class="hover-info">Home</span></span
+          ></a
+        ><a href="members.html"
+          ><span class="material-symbols-outlined">
+            group <span class="hover-info">Members</span></span
+          ></a
+        ><a href="documents.html"
+          ><span class="material-symbols-outlined">
+            feed <span class="hover-info">Documents</span></span
+          ></a
+        ><a href="timeline.html"
+          ><span class="material-symbols-outlined">
+            view_timeline <span class="hover-info">Timeline</span></span
+          ></a
+        ><a href="chat.html"
+          ><span class="material-symbols-outlined">
+            chat <span class="hover-info">Chatting</span></span
+          ></a
+        ><a href="#tp" id="activated"
+          ><span class="material-symbols-outlined">
+            payments <span class="hover-info">Donate</span></span
+          ></a
+        ><a href="calendar.html"
+          ><span class="material-symbols-outlined">
+            calendar_month <span class="hover-info">Calendar</span></span
+          ></a
+        ><a href="countdown.html"
+          ><span class="material-symbols-outlined">
+            hourglass_empty <span class="hover-info">Countdown(s)</span></span
+          ></a
+        ><a href="games.html"
+          ><span class="material-symbols-outlined">
+            stadia_controller <span class="hover-info">Games</span></span
+          ></a
+        ><a href="signup.html"
+          ><span class="material-symbols-outlined">
+            account_circle <span class="hover-info">Account</span></span
+          ></a
+        ></span
+      >
+    </nav>
+    <div id="donation-page">
+      <span
+        class="material-symbols-outlined"
+        id="donation-close"
+        onclick="donateclose()"
+        >close</span
+      >
+      <div>
+        <div>Donate Cash</div>
+        <div class="material-symbols-outlined">payments</div>
+        <div>Donate through In-hand currency</div>
+      </div>
+      <div>
+        <div>Donate Paypal</div>
+        <div class="material-symbols-outlined">language</div>
+        <div>Donate through the Paypal site</div>
+      </div>
+      <div>
+        <div>Donate Crypto</div>
+        <div class="material-symbols-outlined">paid</div>
+        <div>Donate Digital Assets</div>
+      </div>
+      <div>
+        <div>Donate STC Pay</div>
+        <div class="material-symbols-outlined">account_balance</div>
+        <div>Donate through the STC Pay App</div>
+      </div>
+      <div>
+        <div>Donate Credit</div>
+        <div class="material-symbols-outlined">credit_card</div>
+        <div>Donate through the Bank's Site</div>
+      </div>
+    </div>
+    <div class="nav-resistance" id="tp"></div>
+    <div
+      class="material-symbols-outlined"
+      id="donate-button"
+      onclick="donatepage()"
+    >
+      volunteer_activism
+    </div>
+    <div class="donations-count">
+      <div>Donations Count</div>
+      <div><span>SAR</span> <span class="counter">6.00</span></div>
+      <div>Donation count change withing 2-3 business days.</div>
+    </div>
+    <h2>Top Donors</h2>
+    <div class="donor">
+      <div><img src="../images/12_s.webp" alt="pfp" /></div>
+      <div>Name</div>
+      <div><span>SAR</span>&nbsp;<span class="counter">4.00</span></div>
+      <div class="material-symbols-outlined">credit_card</div>
+    </div>
+    <div class="donor">
+      <div><img src="../images/12_s.webp" alt="pfp" /></div>
+      <div>Name</div>
+      <div><span>SAR</span>&nbsp;<span class="counter">2.00</span></div>
+      <div class="material-symbols-outlined">payments</div>
+    </div>
+
+    <div class="donations-count">
+      <div>Goal Count</div>
+      <div><span>SAR</span> <span class="counter">638.74</span></div>
+      <div>Help us reach this goal!</div>
+    </div>
+    <h2>Achieved Goals</h2>
+    <div class="donor">
+      <div><img src="../images/12_s.webp" alt="pfp" /></div>
+      <div>SIuu</div>
+      <div><span>SAR</span>&nbsp;<span class="counter">0.00</span></div>
+      <div class="material-symbols-outlined">check_box</div>
+    </div>
+    <div class="donor">
+      <div><img src="../images/12_s.webp" alt="pfp" /></div>
+      <div>Polystyrene X9</div>
+      <div><span>SAR</span>&nbsp;<span class="counter">72.00</span></div>
+      <div class="material-symbols-outlined">
+        check_box_outline_blank
+        <a
+          href="https://www.jarir.com/sa-en/default-category/non-branded-craft-foam-75214.html"
+          target="_blank"
+          >open_in_new</a
+        >
+      </div>
+    </div>
+    <div class="donor">
+      <div><img src="../images/12_s.webp" alt="pfp" /></div>
+      <div>Foam Cutter</div>
+      <div><span>SAR</span>&nbsp;<span class="counter">259.00</span></div>
+      <div class="material-symbols-outlined">
+        check_box_outline_blank
+        <a
+          href="https://www.jarir.com/sa-en/default-category/non-branded-cutters-knives-463258.html"
+          target="_blank"
+          >open_in_new</a
+        >
+      </div>
+    </div>
+    <div class="donor">
+      <div><img src="../images/12_s.webp" alt="pfp" /></div>
+      <div>Foam Cutter #2</div>
+      <div><span>SAR</span>&nbsp;<span class="counter">69.00</span></div>
+      <div class="material-symbols-outlined">
+        check_box_outline_blank
+        <a
+          href="https://www.jarir.com/sa-en/default-category/non-branded-cutters-knives-37348.html"
+          target="_blank"
+          >open_in_new</a
+        >
+      </div>
+    </div>
+    <div class="donor">
+      <div><img src="../images/12_s.webp" alt="pfp" /></div>
+      <div>HDMI Cable</div>
+      <div><span>SAR</span>&nbsp;<span class="counter">67.00</span></div>
+      <div class="material-symbols-outlined">
+        check_box_outline_blank
+        <a
+          href="https://www.amazon.sa/-/en/UGREEN-High-Speed-Ethernet-Compatible-Computer/dp/B0919QH62B/ref=sr_1_6?crid=2KZ5OOKUJO2GZ&keywords=hdmi%2Bcable%2Bgood%2Bquality&qid=1667835781&qu=eyJxc2MiOiIxLjU0IiwicXNhIjoiMC4wMCIsInFzcCI6IjAuMDAifQ%3D%3D&s=electronics&sprefix=hdmi%2Bcable%2Bgood%2Bquality%2Celectronics%2C139&sr=1-6&th=1"
+          target="_blank"
+          >open_in_new</a
+        >
+      </div>
+    </div>
+    <div class="donor">
+      <div><img src="../images/12_s.webp" alt="pfp" /></div>
+      <div>Dex Cable</div>
+      <div><span>SAR</span>&nbsp;<span class="counter">171.74</span></div>
+      <div class="material-symbols-outlined">
+        check_box_outline_blank
+        <a
+          href="https://www.amazon.sa/-/en/SAMSUNG-USB-C-HDMI-Cable-EE-I3100FBEGWW/dp/B07R54DVT8"
+          target="_blank"
+          >open_in_new</a
+        >
+      </div>
+    </div>
+    <footer>
+      &#169;
+      <script>
+        document.write(/\d{4}/.exec(Date())[0]);
+      </script>
+      JIS Grade 12 &#124; Made with &#10084; by Arsalan
+    </footer>
+    <script>
+      $(".counter").counterUp({
+        delay: 15,
+        time: 2000,
+      });
+      $(".counter").addClass("animated fadeInDownBig");
+      $("h3").addClass("animated fadeIn");
+    </script>
+    <script>
+      const dpage = document.getElementById("donation-page");
+      function donatepage() {
+        dpage.style.filter = "opacity(1)";
+        dpage.style.zIndex = "1000000";
+      }
+      function donateclose() {
+        dpage.style.filter = "opacity(0)";
+        dpage.style.zIndex = "-1000000";
+      }
+    </script>
+  </body>
+</html>
