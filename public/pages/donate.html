@@ -142,6 +142,11 @@
         <div class="material-symbols-outlined">credit_card</div>
         <div>Donate through the Bank's Site</div>
       </div>
+      <div>
+        <div>Donate Author</div>
+        <div class="material-symbols-outlined">coffee</div>
+        <div>Feed the creator of this website</div>
+      </div>
     </div>
     <div class="nav-resistance" id="tp"></div>
     <div
@@ -266,11 +271,13 @@
       const dpage = document.getElementById("donation-page");
       function donatepage() {
         dpage.style.filter = "opacity(1)";
-        dpage.style.zIndex = "1000000";
+        dpage.style.zIndex = "10000";
+        dpage.style.transform = "scale(1)";
       }
       function donateclose() {
         dpage.style.filter = "opacity(0)";
-        dpage.style.zIndex = "-1000000";
+        dpage.style.zIndex = "-10000";
+        dpage.style.transform = "scale(0)";
       }
     </script>
   </body>

@@ -2045,6 +2045,7 @@ h5 {
   align-items: center;
   justify-content: center;
   grid-template-columns: 33% 33% 33%;
+  transform: scale(0);
 }
 #donation-page > span {
   position: absolute;
@@ -2071,7 +2072,7 @@ h5 {
   border: 0.5vw var(--text-inverse) solid;
   border-radius: 1vw;
   transform: translateY(-1vw);
-  filter: drop-shadow(var(--text-inverse) 0.5vw 0.5vw 0.5vw);
+  filter: drop-shadow(var(--text-inverse) 0.35vw 0.35vw);
 }
 #donation-page > div:hover > div:nth-child(2) {
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
