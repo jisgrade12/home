@@ -2176,6 +2176,88 @@ img.wrap-toastmasters {
   margin: 0;
   color: var(--main-color);
 }
+.donate-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  background-color: #000000c6;
+  z-index: -10000;
+  filter: opacity(0);
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease-in-out;
+}
+.donate-wrap > div {
+  background-color: var(--text-color);
+  color: var(--text-inverse);
+  font-family: "koulen", sans-serif;
+  width: 75%;
+  height: 70%;
+  transition: all 0.5s ease-in-out;
+}
+.donate-wrap > div:hover {
+  border-radius: 2vw;
+  transform: translateY(-0.5vw);
+  filter: drop-shadow(var(--main-color) 1vw 1vw 1vw);
+}
+.donate-title {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 92% 8%;
+}
+.donate-title > div:nth-child(1) {
+  font-size: 4vw;
+  margin-left: 1.5vw;
+  text-align: left;
+}
+.donate-title > div:nth-child(2) {
+  font-family: "material symbols outlined";
+  font-size: 4vw;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  transition: all 0.5s ease-in-out;
+}
+.donate-body {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+.donate-body > div:nth-child(1) {
+  margin-left: 1.5vw;
+}
+.donate-body > div:nth-child(1) > img {
+  width: 100%;
+}
+.donate-body > div:nth-child(2) {
+  font-family: "titillium web", sans-serif;
+  font-size: 2vw;
+  text-align: left;
+  font-weight: bold;
+  margin-left: 1vw;
+  margin-right: 1.5vw;
+}
+.donate-bottom {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+.donate-bottom > div:nth-child(1) {
+  font-size: 2vw;
+  text-align: left;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+}
+.donate-bottom > div:nth-child(2) {
+  display: flex;
+  text-align: right;
+  justify-content: end;
+  align-items: center;
+  font-family: "material symbols outlined";
+  font-size: 2.5vw;
+  transition: all 0.5s ease-in-out;
+  margin-right: 1.5vw;
+}
 @media (max-width: 850px) {
   nav {
     height: 7vh;
