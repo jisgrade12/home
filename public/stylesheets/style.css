@@ -1873,12 +1873,15 @@ h5 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0.5vw;
+  border-radius: 0.5vw 0 0 0;
   filter: blur(0.2vw) grayscale(0.5) contrast(0.6);
   transition: all 0.5s ease-in-out;
 }
+.mental-health-buttonsheet > a:nth-child(n + 6) > div > img {
+  border-radius: 0 0 0.5vw 0;
+}
 .mental-health-buttonsheet > a > div:hover {
-  margin-top: -1vh;
+  margin-top: -0.9vh;
   border: 0.47vw var(--text-color) solid;
   filter: drop-shadow(var(--text-inverse) 0.7vw 0.7vw 0.7vw);
 }
@@ -1897,7 +1900,7 @@ h5 {
 }
 .mental-health-buttonsheet > a > div:hover h3 {
   text-shadow: var(--main-color) 0.2vw 0.2vw 0.2vw;
-  margin-bottom: -5vw;
+  margin-bottom: -8vw;
 }
 .mental-health-buttonsheet > a > div h4 {
   z-index: 10000;
@@ -2146,6 +2149,32 @@ h5 {
 .quotes-list > q::first-letter {
   color: var(--main-color);
   font-size: larger;
+}
+img.wrap-toastmasters {
+  width: 30vw;
+  float: left;
+  margin: 1vw 1vw 1vw 3vw;
+  border-radius: 1vw;
+  border: solid var(--main-color) 0.4vw;
+}
+.toastmasters {
+  margin: 0 3vw;
+  text-align: justify;
+  font-size: 1.5vw;
+}
+.toastmasters:before {
+  content: open-quote;
+}
+.toastmasters:after {
+  content: close-quote;
+}
+.toastmasters:before,
+.toastmasters:after,
+.toastmasters::first-letter {
+  display: inline;
+  font-size: 2.5vw;
+  margin: 0;
+  color: var(--main-color);
 }
 @media (max-width: 850px) {
   nav {
