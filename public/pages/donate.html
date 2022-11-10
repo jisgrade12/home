@@ -124,22 +124,22 @@
           <div class="material-symbols-outlined">payments</div>
           <div>Donate through In-hand currency</div>
         </div>
-        <div>
+        <div id="paypal-button">
           <div>Donate Paypal</div>
           <div class="material-symbols-outlined">language</div>
           <div>Donate through the Paypal site</div>
         </div>
-        <div>
+        <div id="crypto-button">
           <div>Donate Crypto</div>
           <div class="material-symbols-outlined">paid</div>
           <div>Donate Digital Assets</div>
         </div>
-        <div>
+        <div id="stc-button">
           <div>Donate STC Pay</div>
           <div class="material-symbols-outlined">account_balance</div>
           <div>Donate through the STC Pay App</div>
         </div>
-        <div>
+        <div id="credit-button">
           <div>Donate Credit</div>
           <div class="material-symbols-outlined">credit_card</div>
           <div>Donate through the Bank's Site</div>
@@ -150,7 +150,7 @@
       <div>
         <div class="donate-title">
           <div>Donate Cash</div>
-          <div>payments</div>
+          <div onclick="cashclose()">close</div>
         </div>
         <div class="donate-body">
           <div><img src="../images/qr-cash.png" alt="QR Code" /></div>
@@ -167,12 +167,93 @@
         </div>
       </div>
     </div>
+    <div class="donate-wrap" id="donate-credit">
+      <div>
+        <div class="donate-title">
+          <div>Donate Credit</div>
+          <div onclick="creditclose()">close</div>
+        </div>
+        <div class="donate-body">
+          <div><img src="../images/12_s.webp" alt="QR Code" /></div>
+          <div>[Service not yet available]</div>
+        </div>
+        <div class="donate-bottom">
+          <div>Alhussan International School - Jubail</div>
+          <div>share print open_in_new</div>
+        </div>
+      </div>
+    </div>
+    <div class="donate-wrap" id="donate-paypal">
+      <div>
+        <div class="donate-title">
+          <div>Donate Paypal</div>
+          <div onclick="paypalclose()">close</div>
+        </div>
+        <div class="donate-body">
+          <div><img src="../images/12_s.webp" alt="QR Code" /></div>
+          <div>
+            You can donate money through the Paypal website linked in the QR
+            code and in the bottom right icon. Also the paypal id is mentioned
+            in the bottom left. To confirm the you have sent in the deposit,
+            please send receipt/transaction screenshot at
+            <a href="mailto:jisgrade12@gmail.com">jisgrade12@gmail.com</a>.
+          </div>
+        </div>
+        <div class="donate-bottom">
+          <div>@paypalid</div>
+          <div>share print open_in_new</div>
+        </div>
+      </div>
+    </div>
+    <div class="donate-wrap" id="donate-crypto">
+      <div>
+        <div class="donate-title">
+          <div>Donate Crypto</div>
+          <div onclick="cryptoclose()">close</div>
+        </div>
+        <div class="donate-body">
+          <div><img src="../images/12_s.webp" alt="QR Code" /></div>
+          <div>
+            To send in your crypto coins make sure to have a valid crypto wallet
+            and transaction fees. Send your assets to the Wallet Id mentioned in
+            the bottom left or open the crypto profile by the icon in the bottom
+            right. It is recommended to send stable coins such as USDT or USDC.
+            To confirm the you have sent in the deposit, please send
+            receipt/transaction screenshot at
+            <a href="mailto:jisgrade12@gmail.com">jisgrade12@gmail.com</a>.
+          </div>
+        </div>
+        <div class="donate-bottom">
+          <div>[Wallet ID]</div>
+          <div>share print open_in_new</div>
+        </div>
+      </div>
+    </div>
+    <div class="donate-wrap" id="donate-stc">
+      <div>
+        <div class="donate-title">
+          <div>Donate STC Pay</div>
+          <div onclick="stcclose()">close</div>
+        </div>
+        <div class="donate-body">
+          <div><img src="../images/12_s.webp" alt="QR Code" /></div>
+          <div>
+            Send your Money through the STC Pay app by using the QR Code
+            provided or the link in the bottom right corner. Also the profile ID
+            is mentioned in the bottom left for easier browsing on the app. To
+            confirm the you have sent in the deposit, please send
+            receipt/transaction screenshot at
+            <a href="mailto:jisgrade12@gmail.com">jisgrade12@gmail.com</a>.
+          </div>
+        </div>
+        <div class="donate-bottom">
+          <div>@STCPay</div>
+          <div>share print open_in_new</div>
+        </div>
+      </div>
+    </div>
     <div class="nav-resistance" id="tp"></div>
-    <div
-      class="material-symbols-outlined"
-      id="donate-button"
-      onclick="donatepage()"
-    >
+    <div class="material-symbols-outlined" id="donate-button">
       volunteer_activism
     </div>
     <div class="donations-count">
@@ -267,33 +348,6 @@
       $(".counter").addClass("animated fadeInDownBig");
       $("h3").addClass("animated fadeIn");
     </script>
-    <script>
-      const dpage = document.getElementById("donation-page");
-      const body = document.getElementById("body");
-      function donatepage() {
-        dpage.style.filter = "opacity(1)";
-        dpage.style.zIndex = "10000";
-        dpage.style.transform = "scale(1)";
-        body.style.overflow = "hidden";
-      }
-      function donateclose() {
-        dpage.style.filter = "opacity(0)";
-        dpage.style.zIndex = "-10000";
-        dpage.style.transform = "scale(0)";
-        body.style.overflow = "auto";
-      }
-      const cbut = document.getElementById("cash-button");
-      const cashd = document.getElementById("donate-cash");
-      cbut.onclick = cashopen;
-      cashd.onclick = cashclose;
-      function cashopen() {
-        cashd.style.filter = "opacity(1)";
-        cashd.style.zIndex = "10000";
-      }
-      function cashclose() {
-        cashd.style.filter = "opacity(0)";
-        cashd.style.zIndex = "-10000";
-      }
-    </script>
+    <script src="../scripts/donate.js"></script>
   </body>
 </html>
