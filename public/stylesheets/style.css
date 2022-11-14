@@ -2276,6 +2276,9 @@ img.wrap-toastmasters {
 .donate-body > div:nth-child(1) {
   margin-left: 1.5vw;
 }
+.donate-body > div:nth-child(2) li {
+  font-size: 1vw;
+}
 .donate-body > div:nth-child(1) > img {
   width: 100%;
 }
@@ -2294,6 +2297,13 @@ img.wrap-toastmasters {
 .donate-body > div:nth-child(2) a:hover {
   color: var(--main-color);
   filter: brightness(1.2);
+}
+.donate-bottom > div:nth-child(2) a {
+  margin: 0 0.5vw;
+  transition: all 0.5s ease-in-out;
+}
+.donate-bottom > div:nth-child(2) a:hover {
+  color: var(--main-color);
 }
 .donate-bottom {
   display: grid;
