@@ -2089,18 +2089,20 @@ h5 {
   transition: all 0.7s ease-in-out !important;
   align-items: center;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 .donation-layout {
   display: grid;
-  width: 100%;
-  height: 87vh;
+  width: calc(100% - (2 * 0.5vw + 3vw));
+  height: 84vh;
   transition: all 0.7s ease-in-out !important;
   align-items: center;
   justify-content: center;
   grid-template-columns: 33% 33% 33%;
 }
 #donation-page > span {
-  margin: 1vw 0 0 95vw;
+  margin: -3vw 0 0 95vw;
   font-size: 3vw;
   cursor: pointer;
   padding: 0.5vw;
@@ -2124,10 +2126,11 @@ h5 {
   width: 80%;
   box-sizing: border-box;
   cursor: pointer;
-}
-.donation-layout > div:hover {
   border: 0.5vw var(--text-inverse) solid;
   border-radius: 1vw;
+  padding: 1vw 0;
+}
+.donation-layout > div:hover {
   transform: translateY(-1vw);
   filter: drop-shadow(var(--text-inverse) 0.35vw 0.35vw);
 }
@@ -2136,10 +2139,14 @@ h5 {
 }
 .donation-layout > div > :nth-child(1) {
   font-size: 4vw;
+  line-height: 5vw;
 }
 .donation-layout > div > :nth-child(2) {
   transition: all 0.5s ease-in-out;
-  font-size: 10vw;
+  font-size: 8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .donation-layout > div > :nth-child(3) {
   font-size: 1.8vw;
@@ -2203,6 +2210,9 @@ img.wrap-toastmasters {
   height: 100%;
   transition: all 0.5s 0 ease-in-out, filter 1s ease-in-out;
 }
+.donate-wrap a {
+  user-select: none;
+}
 .donate-title > div:nth-child(1)::before {
   font-family: "material symbols outlined";
   font-size: 4vw;
@@ -2221,6 +2231,7 @@ img.wrap-toastmasters {
   filter: opacity(1);
 }
 .donate-wrap > div {
+  display: grid;
   background-color: var(--text-color);
   color: var(--text-inverse);
   font-family: "koulen", sans-serif;
@@ -2228,10 +2239,11 @@ img.wrap-toastmasters {
   height: 70%;
   transition: all 0.5s ease-in-out;
   padding: 1vw;
+  grid-template-rows: 20% 70% 10%;
 }
 .donate-wrap > div:hover {
   border-radius: 1.5vw;
-  transform: translateY(-0.5vw);
+  transform: translateY(-1vw);
   filter: drop-shadow(var(--main-color) 1vw 1vw 1vw);
 }
 .donate-title {
@@ -2247,13 +2259,13 @@ img.wrap-toastmasters {
   content: "paid";
 }
 #donate-paypal > div > .donate-title > div:nth-child(1)::before {
-  content: "language";
+  content: "computer";
 }
 #donate-credit > div > .donate-title > div:nth-child(1)::before {
   content: "credit_card";
 }
 #donate-stc > div > .donate-title > div:nth-child(1)::before {
-  content: "account_balance";
+  content: "smartphone";
 }
 .donate-title > div:nth-child(1) {
   display: flex;
