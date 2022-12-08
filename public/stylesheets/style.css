@@ -2351,6 +2351,13 @@ img.wrap-toastmasters {
   transition: all 0.5s ease-in-out;
   margin-right: 1.5vw;
 }
+.event-tooltip-content {
+  background-color: var(--text-inverse);
+  padding: 0.5vw;
+  border-radius: 0.5vw;
+  margin-left: 1vw;
+  border: var(--text-color) 0.1vw solid;
+}
 @media (max-width: 850px) {
   nav {
     height: 7vh;
