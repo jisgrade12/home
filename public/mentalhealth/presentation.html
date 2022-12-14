@@ -32,7 +32,6 @@
       href="../scripts/jquery.magnify/dist/jquery.magnify.css"
       rel="stylesheet"
     />
-    <script src="../scripts/jquery.magnify/dist/jquery.magnify.js"></script>
     <link href="../stylesheets/magnify-bezelless-theme.css" rel="stylesheet" />
     <title>JIS | Mental Health Awareness</title>
     <style>
@@ -74,7 +73,7 @@
       }
     </style>
   </head>
-  <body>
+  <body id="body1">
     <nav>
       <a href="../mentalhealth.html"
         ><img src="../images/mental2.webp" alt="Mental Health Logo"
@@ -323,11 +322,25 @@
         Arsalan</a
       >
     </footer>
-    <div class="loader-wrapper">
+    <div class="loader-wrapper" id="loader1">
       <img src="../images/mental2.webp" class="loader" />
       <div id="factDisplay"></div>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.2.min.js"
+      integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA="
+      crossorigin="anonymous"
+    ></script>
     <script src="../scripts/loader.js"></script>
     <script src="../scripts/loader2.js"></script>
+    <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+    <script>
+      // Create a new YUI instance and populate it with the required modules.
+      YUI().use("imageloader", function (Y) {
+        var myFirstGroup = new Y.ImgLoadGroup({ timeLimit: 2 });
+        myFirstGroup.addTrigger(".imageGallery", "mouseover");
+      });
+    </script>
+    <script src="../scripts/jquery.magnify/dist/jquery.magnify.js"></script>
   </body>
 </html>
