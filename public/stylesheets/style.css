@@ -2358,10 +2358,6 @@ img.wrap-toastmasters {
   margin-left: 1vw;
   border: var(--text-color) 0.1vw solid;
 }
-img {
-  image-resolution: 300dpi;
-  image-rendering: pixelated;
-}
 .loader-wrapper {
   width: 100%;
   height: 100%;
