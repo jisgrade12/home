@@ -2383,6 +2383,36 @@ img.wrap-toastmasters {
   width: 50vw;
   text-align: center;
 }
+.video-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.video-wrapper video {
+  width: 80%;
+  margin: 1vw;
+}
+.doc-listings > div {
+  display: grid;
+  margin: 0 3.5vw;
+  grid-template-columns: 70% 30%;
+}
+.doc-listings > div > div:nth-child(1) {
+  font-size: 3vw;
+  font-family: "koulen", sans-serif;
+}
+.doc-listings > div > div:nth-child(2) {
+  font-size: 3vw;
+  font-family: "material symbols outlined", sans-serif;
+  text-align: end;
+}
+.doc-listings > div > div:nth-child(2) > a {
+  transition: all 0.5s ease-in-out;
+}
+.doc-listings > div > div:nth-child(2) > a:hover {
+  color: var(--main-color);
+}
 @keyframes loader {
   from {
     transform: scale(0.8);
