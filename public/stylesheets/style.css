@@ -1587,48 +1587,6 @@ button.msg:hover .material-symbols-outlined {
   text-transform: capitalize;
   animation: nav-gradient 15s infinite;
 }
-.projects-group {
-  display: grid;
-  grid-template-columns: 30% 30% 30%;
-  column-gap: 3.333%;
-  margin-left: 3vw;
-  margin-top: 3vw;
-}
-.projects-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  user-select: none;
-  cursor: pointer;
-  background-color: #ffffff;
-  color: var(--text-inverse);
-  border-radius: 1.5vw;
-  padding: 1.5vw;
-  transition: all 1s ease-in-out;
-}
-.projects-wrap:hover {
-  margin: -1.5vw;
-  transform: scale(1.01);
-  color: var(--text-color);
-  border: var(--main-color) 0.3vw solid;
-  background-color: #ffffff60;
-}
-.projects-wrap > div:nth-child(1) {
-  font-family: "koulen";
-  font-size: 3.5vw;
-}
-.projects-wrap > div:nth-child(2) img {
-  max-height: 10vw;
-  max-width: 25vw;
-}
-.projects-wrap > div:nth-child(3) {
-  font-size: 2.7vw;
-}
-.projects-wrap > div:nth-child(4) {
-  font-size: 2vw;
-  font-style: italic;
-}
 footer {
   display: flex;
   align-items: center;
