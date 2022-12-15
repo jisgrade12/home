@@ -17,7 +17,7 @@
   document.getElementById("factDisplay").innerHTML = facts[randomFact];
 })();
 
-Window.onload = (function loaderflow() {
+Window.onload = function loaderflow() {
   const loader = document.getElementById("loader1");
   const page = document.getElementById("body1");
   if (loader.style.display === "flex") {
@@ -25,4 +25,4 @@ Window.onload = (function loaderflow() {
   } else {
     page.style.overflow = "auto";
   }
-})();
+};
