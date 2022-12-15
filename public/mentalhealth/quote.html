@@ -24,10 +24,7 @@
     <meta name="theme-color" content="#008d2c" />
     <link rel="icon" type="image/x-icon" href="../images/mental.webp" />
     <link rel="stylesheet" href="../stylesheets/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
+
     <link
       href="../scripts/jquery.magnify/dist/jquery.magnify.css"
       rel="stylesheet"
@@ -159,6 +156,22 @@
         Arsalan</a
       >
     </footer>
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      />
+    </noscript>
+    <script>
+      (function () {
+        var cssMain = document.createElement("link");
+        cssMain.href =
+          "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200";
+        cssMain.rel = "stylesheet";
+        cssMain.type = "text/css";
+        document.getElementsByTagName("head")[0].appendChild(cssMain);
+      })();
+    </script>
     <div class="loader-wrapper" id="loader1">
       <img src="../images/mental2.webp" class="loader" />
       <div id="factDisplay"></div>
