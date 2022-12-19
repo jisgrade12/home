@@ -12,12 +12,12 @@
     "Advice other to good",
     "Bring your colleagues up",
     "Don't take mental health as a joke",
+    "Sultan Azim",
   ];
   var randomFact = Math.floor(Math.random() * facts.length);
   document.getElementById("factDisplay").innerHTML = facts[randomFact];
 })();
-
-Window.onload = function loaderflow() {
+function loaderflow() {
   const loader = document.getElementById("loader1");
   const page = document.getElementById("body1");
   if (loader.style.display === "flex") {
@@ -25,4 +25,5 @@ Window.onload = function loaderflow() {
   } else {
     page.style.overflow = "auto";
   }
-};
+}
+document.getElementById("body1").onload = loaderflow();
