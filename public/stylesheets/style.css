@@ -1679,12 +1679,14 @@ details {
   font-size: 2.3vw;
   transition: all 0.5s ease-in-out;
   margin-bottom: 1vw;
-  width: auto;
+  width: calc(100% - 6vw);
   cursor: pointer;
+  margin: 0 3vw;
 }
 details:hover {
   color: var(--main-color);
-  margin-left: 1vw;
+  transform: translate(1vw);
+  width: calc(100% - 7vw);
 }
 details p {
   font-size: 1.7vw;
@@ -1763,7 +1765,6 @@ h5 {
 .presentation-holder {
   display: flex;
   width: calc(100% -3vw);
-  margin: 0 3vw;
 }
 .presentation {
   width: 74vw;
@@ -1779,6 +1780,8 @@ h5 {
 }
 .presentation-holder div:nth-child(1) {
   width: 100%;
+  margin-top: -2.5vw;
+  margin-left: 1vw;
   font-family: "koulen", sans-serif;
   font-size: 4vw;
 }
