@@ -2374,6 +2374,34 @@ img.wrap-toastmasters {
 .doc-listings > div > div:nth-child(2) > a:hover {
   color: var(--main-color);
 }
+.departments-grid {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin: 0 3vw;
+  column-gap: 1vw;
+}
+.departments-grid > a > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24vw;
+  width: 24vw;
+  margin: 1vw;
+  background: var(--main-color) content-box;
+  border-radius: 1vw;
+  font-family: "koulen", sans-serif;
+  font-size: 5vw;
+  text-align: center;
+  line-height: 5vw;
+  transition: all 0.5s ease-in-out;
+  box-sizing: content-box;
+}
+.departments-grid > a > div:hover {
+  border: 0.5vw solid var(--main-color);
+  padding: 1vw;
+  height: 21vw;
+  width: 21vw;
+}
 @keyframes loader {
   from {
     transform: scale(0.8);
@@ -2384,7 +2412,6 @@ img.wrap-toastmasters {
     filter: drop-shadow(var(--main-color) 0.3vw 0.3vw 0.3vw);
   }
 }
-
 @media (max-width: 850px) {
   nav {
     height: 7vh;
