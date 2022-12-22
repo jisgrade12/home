@@ -134,10 +134,12 @@
 *,
 html {
   scroll-behavior: smooth !important;
+  scroll-margin-top: 6vw;
 }
 head,
 body {
   scroll-behavior: smooth;
+  scroll-margin-top: 6vw;
   margin: 0px;
   height: 100%;
   background-color: var(--text-inverse);
@@ -2380,6 +2382,13 @@ img.wrap-toastmasters {
   margin: 0 3vw;
   column-gap: 1vw;
 }
+.departments-grid > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
 .departments-grid > a > div {
   display: flex;
   align-items: center;
@@ -2401,6 +2410,9 @@ img.wrap-toastmasters {
   padding: 1vw;
   height: 21vw;
   width: 21vw;
+  background-color: #008d2c24;
+  transform: translateY(-1vw);
+  box-shadow: 0 1vw 2vw #000000c3;
 }
 @keyframes loader {
   from {
