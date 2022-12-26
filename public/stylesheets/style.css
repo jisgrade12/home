@@ -1740,10 +1740,10 @@ h5 {
   grid-template-columns: 50% 50%;
   margin: 0 3vw;
 }
-/*.audio-platform audio {
+.audio-platform audio {
   width: 70%;
-  margin: 0 0;
-}*/
+  filter: opacity(0.8);
+}
 .audio-platform div:nth-child(n) {
   display: flex;
   align-items: center;
