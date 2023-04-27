@@ -376,9 +376,6 @@ label:hover .material-symbols-outlined {
   width: fit-content;
   color: #d7d7d7;
 }
-.home-title2 {
-  margin-left: 3.5vw;
-}
 .home-title:hover,
 .for-title:hover,
 .home-title2:hover {
@@ -413,12 +410,16 @@ label:hover .material-symbols-outlined {
   transform-origin: bottom left;
 }
 .home-title2 {
-  font-size: 8vw;
-  margin-top: -3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6vw;
+  margin-top: -2vw;
+  margin-left: 5vw;
 }
 .home-title2:after {
   background-color: #008d2c9d;
-  margin-top: -2vw;
+  margin-top: -4vw;
 }
 .button-holder {
   position: absolute;
@@ -1176,6 +1177,14 @@ form {
 .cd-horizontal-timeline .events-content p {
   line-height: 1.6;
 }
+.image-centere {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.image-centere > img {
+  height: 50vh;
+}
 @media only screen and (min-width: 768px) {
   .cd-horizontal-timeline .events-content h2 {
     font-size: 5vw;
@@ -1824,7 +1833,7 @@ h5 {
 }
 .mental-health-buttonsheet {
   display: grid;
-  margin: -3vw 3vw;
+  margin: 0vw 3vw 3vw 3vw;
   grid-template-columns: 20% 20% 20% 20% 20%;
   height: 50vh;
 }
@@ -2422,6 +2431,9 @@ img.wrap-toastmasters {
   background-color: #008d2c24;
   transform: translateY(-1vw);
   box-shadow: 0 1vw 2vw #000000c3;
+}
+.sasta-logo {
+  width: 20vw;
 }
 @keyframes loader {
   from {
